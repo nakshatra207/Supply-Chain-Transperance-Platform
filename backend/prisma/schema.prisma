@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  FARMER
+  PARTNER // covers processor / distributor / retailer for this MVP
+  ADMIN
+}
+
+enum EventStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+}
+
+model User {
+  id           String   @id @default(uuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         Role
+  createdAt    DateTime @default(now())
+
+  batches Batch[]            @relation("FarmerBatches")
+  events  SupplyChainEvent[] @relation("EventParticipant")
+}
+
+model Batch {
+  id              String      @id @default(uuid())
+  batchId         String      @unique // human readable e.g. ORG-BAS-001
+  productName     String
+  cropType        String
+  farmLocation    String
+  harvestDate     DateTime
+  quantity        Float
+  unit            String
+  organicCertId   String?
+  description     String?
+  certificateHash String?
+  qrCodeUrl       String?
+
+  farmerId String
+  farmer   User   @relation("FarmerBatches", fields: [farmerId], references: [id])
+
+  chainTxHash String?
+  chainStatus EventStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+
+  events SupplyChainEvent[]
+}
+
+model SupplyChainEvent {
+  id            String @id @default(uuid())
+  batch         Batch  @relation(fields: [batchId], references: [batchId])
+  batchId       String
+  eventType     String // e.g. RECEIVED_BY_PROCESSOR, DISPATCHED, DELIVERED_TO_RETAILER...
+  participant   User   @relation("EventParticipant", fields: [participantId], references: [id])
+  participantId String
+  location      String?
+  notes         String?
+
+  chainTxHash String?
+  chainStatus EventStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+}

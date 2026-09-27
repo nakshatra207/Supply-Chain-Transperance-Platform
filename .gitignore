@@ -1,0 +1,7 @@
+node_modules
+.env
+frontend/.env
+backend/dist
+contracts/artifacts
+contracts/cache
+*.log

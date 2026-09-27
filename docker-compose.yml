@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: organic_trace_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: organic
+      POSTGRES_PASSWORD: organic
+      POSTGRES_DB: organic_trace
+    ports:
+      - "5432:5432"
+    volumes:
+      - organic_trace_data:/var/lib/postgresql/data
+volumes:
+  organic_trace_data:
