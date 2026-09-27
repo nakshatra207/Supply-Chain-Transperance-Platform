@@ -76,7 +76,7 @@ describe("SupplyChain", function () {
     const count = await supplyChain.getEventCount("ORG-BAS-001");
     expect(count).to.equal(2);
 
-    const [eventType] = await supplyChain.getEvent("ORG-BAS-001", 0);
+    const [eventType] = await supplyChain.getFunction("getEvent")("ORG-BAS-001", 0);
     expect(eventType).to.equal("PACKAGED");
   });
 });

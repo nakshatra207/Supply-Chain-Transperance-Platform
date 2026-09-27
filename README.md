@@ -48,10 +48,30 @@ organic-trace/
 - Node.js 18+ and npm
 - Docker Desktop (for PostgreSQL) — or a local PostgreSQL install
 - Windows PowerShell (all commands below use PowerShell syntax)
+- Python 3.8+ (optional, for run.py)
 
 ---
 
-## 1. Installation
+## 🚀 One-Click Quick Start (Windows / All Platforms)
+
+You can run the entire platform (Postgres, Hardhat blockchain node, contract deployment, backend API, frontend UI, and open browser) in **one single command or double click**:
+
+### Windows (One Click):
+- **Double click `run.bat`** (or run `.\run.bat` in CMD / PowerShell)
+- To stop everything cleanly: **Double click `stop.bat`**
+
+### Cross-Platform Python Orchestrator:
+```bash
+python run.py             # Start entire stack, deploy contracts, open browser
+python run.py --status    # Check status of all ports & services
+python run.py --stop      # Stop all services and free ports
+python run.py --test      # Run smart contract tests
+python run.py --seed      # Re-seed database with demo users
+```
+
+---
+
+## 1. Manual Step-by-Step Setup
 
 Open PowerShell in the project root (`organic-trace/`) and install each part:
 

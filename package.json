@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
+    "start": "python run.py",
+    "stop": "python run.py --stop",
+    "status": "python run.py --status",
     "blockchain": "cd contracts && npx hardhat node",
     "deploy": "cd contracts && npx hardhat run scripts/deploy.js --network localhost",
     "test:contracts": "cd contracts && npx hardhat test",

@@ -5,3 +5,7 @@ backend/dist
 contracts/artifacts
 contracts/cache
 *.log
+logs/
+.pids
+dist/
+frontend/dist/
