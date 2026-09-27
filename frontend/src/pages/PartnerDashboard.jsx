@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import api from "../api.js";
+import { useLanguage } from "../LanguageContext.jsx";
 
 export default function PartnerDashboard() {
   const [batches, setBatches] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const { t } = useLanguage();
 
   useEffect(() => {
     api
@@ -17,10 +19,10 @@ export default function PartnerDashboard() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
-      <h1 className="text-2xl font-semibold text-stone-900">All Batches</h1>
-      <p className="text-sm text-stone-500 mt-1">Open a batch to record a processing, shipment, or retail event.</p>
+      <h1 className="text-2xl font-semibold text-stone-900">{t("partner.title")}</h1>
+      <p className="text-sm text-stone-500 mt-1">{t("partner.desc")}</p>
 
-      {loading && <p className="mt-6 text-sm text-stone-500">Loading...</p>}
+      {loading && <p className="mt-6 text-sm text-stone-500">{t("partner.loading")}</p>}
       {error && <p className="mt-6 text-sm text-red-600">{error}</p>}
 
       <div className="mt-6 grid sm:grid-cols-2 gap-4">
@@ -31,9 +33,11 @@ export default function PartnerDashboard() {
             className="block p-5 rounded-lg border border-stone-200 bg-white hover:border-leaf-400 hover:shadow-sm transition"
           >
             <h3 className="font-semibold text-stone-900">{b.productName}</h3>
-            <p className="text-sm text-stone-500 mt-1">Batch ID: {b.batchId}</p>
+            <p className="text-sm text-stone-500 mt-1">{t("batch.batchId")}: {b.batchId}</p>
             <p className="text-sm text-stone-500">{b.farmLocation}</p>
-            <p className="text-xs text-stone-400 mt-2">{b.events?.length || 0} event(s) recorded</p>
+            <p className="text-xs text-stone-400 mt-2">
+              {b.events?.length || 0} {t("partner.eventsRecorded")}
+            </p>
           </Link>
         ))}
       </div>

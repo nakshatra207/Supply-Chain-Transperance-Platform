@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../LanguageContext.jsx";
 
 export default function Landing() {
   const [batchId, setBatchId] = useState("");
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const goToTrace = (e) => {
     e.preventDefault();
@@ -14,25 +16,24 @@ export default function Landing() {
     <div>
       <section className="max-w-6xl mx-auto px-4 py-20 text-center">
         <span className="inline-block px-3 py-1 rounded-full bg-leaf-100 text-leaf-700 text-xs font-medium mb-4">
-          B.Tech Major Project · Blockchain Traceability
+          {t("landing.badge")}
         </span>
         <h1 className="text-4xl sm:text-5xl font-bold text-stone-900 tracking-tight">
-          From Farm to Consumer — <span className="text-leaf-600">Verified Traceability</span>
+          {t("landing.heroTitle")} <span className="text-leaf-600">{t("landing.heroHighlight")}</span>
         </h1>
         <p className="mt-4 text-stone-600 max-w-2xl mx-auto">
-          Track every organic product batch from the farmer's field through processing, distribution,
-          and retail — with a tamper-evident record backed by blockchain.
+          {t("landing.heroDesc")}
         </p>
 
         <form onSubmit={goToTrace} className="mt-8 max-w-md mx-auto flex gap-2">
           <input
             value={batchId}
             onChange={(e) => setBatchId(e.target.value)}
-            placeholder="Enter Batch ID e.g. ORG-BAS-001"
-            className="flex-1 border border-stone-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-leaf-400"
+            placeholder={t("landing.inputPlaceholder")}
+            className="flex-1 border border-stone-300 rounded-md px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-leaf-400 bg-white"
           />
-          <button className="px-4 py-2 rounded-md bg-leaf-600 text-white text-sm font-medium hover:bg-leaf-700">
-            Trace Product
+          <button className="px-4 py-2 rounded-md bg-leaf-600 text-white text-sm font-medium hover:bg-leaf-700 transition">
+            {t("landing.traceBtn")}
           </button>
         </form>
       </section>
@@ -40,9 +41,18 @@ export default function Landing() {
       <section className="bg-white border-y border-stone-200">
         <div className="max-w-6xl mx-auto px-4 py-14 grid sm:grid-cols-3 gap-8">
           {[
-            { title: "1. Farmer Registers Batch", desc: "Product details are stored in the database and a creation record is written on-chain." },
-            { title: "2. Supply Chain Events", desc: "Processors, distributors and retailers add tamper-evident event records as the product moves." },
-            { title: "3. Customer Scans QR", desc: "Anyone can scan the batch QR code to see the full verified history — no login required." },
+            {
+              title: t("landing.step1Title"),
+              desc: t("landing.step1Desc"),
+            },
+            {
+              title: t("landing.step2Title"),
+              desc: t("landing.step2Desc"),
+            },
+            {
+              title: t("landing.step3Title"),
+              desc: t("landing.step3Desc"),
+            },
           ].map((s) => (
             <div key={s.title} className="p-5 rounded-lg border border-stone-200 bg-stone-50">
               <h3 className="font-semibold text-stone-900">{s.title}</h3>
@@ -53,17 +63,12 @@ export default function Landing() {
       </section>
 
       <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-2xl font-semibold text-stone-900 text-center">Why blockchain here</h2>
+        <h2 className="text-2xl font-semibold text-stone-900 text-center">{t("landing.whyTitle")}</h2>
         <p className="mt-3 text-center text-stone-600 max-w-2xl mx-auto text-sm">
-          The blockchain stores batch IDs, event metadata, timestamps and cryptographic hashes —
-          never documents, images, or personal data. This creates a tamper-evident audit trail while
-          keeping the bulk of application data in PostgreSQL.
+          {t("landing.whyDesc")}
         </p>
         <div className="mt-6 text-xs text-stone-500 max-w-2xl mx-auto bg-amber-50 border border-amber-200 rounded-md p-4">
-          <strong>Important:</strong> Blockchain provides a tamper-evident and auditable record of
-          submitted and verified supply-chain information. Physical product authenticity still depends
-          on trusted participants, certification authorities, inspections, and other verification
-          mechanisms.
+          <strong>{t("landing.importantTitle")}</strong> {t("landing.importantDesc")}
         </div>
       </section>
     </div>
