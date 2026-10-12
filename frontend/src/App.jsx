@@ -70,10 +70,30 @@ function Protected({ role, children }) {
 }
 
 function Footer() {
-  const { t } = useLanguage();
+  const { t, lang, setLanguage, languages } = useLanguage();
   return (
-    <footer className="border-t border-stone-200 text-center text-xs text-stone-500 py-6 px-4">
-      {t("footer.disclaimer")}
+    <footer className="border-t border-stone-200 text-xs text-stone-500 py-6 px-4">
+      <div className="max-w-4xl mx-auto text-center space-y-3">
+        <p>{t("footer.disclaimer")}</p>
+        <div className="pt-2 flex flex-wrap items-center justify-center gap-1 text-[11px]">
+          <span className="text-stone-400 font-medium mr-1">🇮🇳 Available in all Indian Languages:</span>
+          {languages.slice(0, 9).map((l) => (
+            <button
+              key={l.code}
+              type="button"
+              onClick={() => setLanguage(l.code)}
+              className={`px-1.5 py-0.5 rounded transition ${
+                lang === l.code
+                  ? "bg-leaf-600 text-white font-semibold"
+                  : "text-stone-600 hover:text-stone-900 hover:bg-stone-200/50"
+              }`}
+            >
+              {l.nativeName}
+            </button>
+          ))}
+          <span className="text-stone-400 text-[10px] ml-1">(+ 14 more in top selector)</span>
+        </div>
+      </div>
     </footer>
   );
 }
