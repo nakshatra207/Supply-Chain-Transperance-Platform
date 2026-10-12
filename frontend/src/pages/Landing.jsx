@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../LanguageContext.jsx";
+import { INDIAN_GOV_SCHEMES } from "../constants/schemes";
 
 export default function Landing() {
   const [batchId, setBatchId] = useState("");
@@ -57,6 +58,21 @@ export default function Landing() {
             <div key={s.title} className="p-5 rounded-lg border border-stone-200 bg-stone-50">
               <h3 className="font-semibold text-stone-900">{s.title}</h3>
               <p className="mt-2 text-sm text-stone-600">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="max-w-6xl mx-auto px-4 py-14">
+        <h2 className="text-2xl font-semibold text-stone-900 text-center">Active Indian Government Schemes</h2>
+        <p className="mt-3 text-center text-stone-600 max-w-2xl mx-auto text-sm">
+          Explore the current initiatives supporting organic and natural farming across India.
+        </p>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {INDIAN_GOV_SCHEMES.map((scheme) => (
+            <div key={scheme.id} className="bg-white border border-stone-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border-t-4 border-t-leaf-500">
+              <h3 className="font-bold text-stone-900">{scheme.name}</h3>
+              <p className="mt-2 text-sm text-stone-600 leading-relaxed">{scheme.description}</p>
             </div>
           ))}
         </div>

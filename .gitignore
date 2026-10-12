@@ -68,3 +68,6 @@ Desktop.ini
 .idea/
 *.sublime-project
 *.sublime-workspace
+
+
+.playwright-mcp/
