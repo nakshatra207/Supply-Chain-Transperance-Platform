@@ -34,6 +34,15 @@ export default {
   "landing.importantTitle": "महत्वपूर्ण नोट:",
   "landing.importantDesc":
     "ब्लॉकचेन दर्ज की गई जानकारी का सुरक्षित व पारदर्शी रिकॉर्ड प्रदान करता है। भौतिक उत्पाद की गुणवत्ता प्रमाणित भागीदारों, प्रमाणन एजेंसियों और निरीक्षणों पर निर्भर करती है।",
+  "landing.schemesBadge": "सरकारी कृषि पहल",
+  "landing.schemesTitle": "सक्रिय भारतीय सरकारी योजनाएं",
+  "landing.schemesDesc": "भारत भर में जैविक प्रमाणीकरण, प्रत्यक्ष आय, सूक्ष्म सिंचाई और कृषि मूल्य श्रृंखला को सशक्त बनाने वाली राष्ट्रीय योजनाएं देखें।",
+  "landing.schemesAutoScroll": "स्वतः क्षैतिज स्क्रॉलिंग · जांचने के लिए कर्सर ले जाएं या ड्रैग करें",
+  "landing.schemesPausedNotice": "स्क्रॉलिंग रुकी हुई है · खोजने के लिए तीरों या ड्रैग का उपयोग करें",
+  "landing.schemesPause": "रोकें",
+  "landing.schemesPlay": "ऑटो-स्क्रॉल",
+  "landing.schemesLearnMore": "आधिकारिक पोर्टल",
+  "landing.schemesKeyBenefit": "मुख्य लाभ",
 
   // Login & Register
   "auth.loginTitle": "लॉग इन करें",
