@@ -5,6 +5,7 @@ pragma solidity ^0.8.24;
 /// @notice Tamper-evident record of organic-farming batch creation, supply-chain
 ///         events, and certificate hashes. Stores only metadata and hashes —
 ///         never documents, files, or personal data.
+///         Includes inline EVM assembly (Yul) optimizations for low-gas execution.
 contract SupplyChain {
     address public owner;
 
@@ -41,10 +42,12 @@ contract SupplyChain {
     }
 
     mapping(string => Product) public products; // batchId => Product
+    mapping(string => bytes32) public productMetadataHashes; // batchId => SHA-256 metadata hash
     mapping(string => SupplyChainEvent[]) public batchEvents; // batchId => events
     mapping(string => Certificate) public certificates; // batchId => certificate
 
     event ProductCreated(string indexed batchId, address indexed farmer, uint256 timestamp);
+    event ProductMetadataAnchored(string indexed batchId, bytes32 metadataHash, uint256 timestamp);
     event SupplyChainEventAdded(string indexed batchId, string eventType, address indexed participant, uint256 timestamp);
     event CertificateHashAdded(string indexed batchId, string certificateId, bytes32 certificateHash, address indexed verifier);
 
@@ -54,7 +57,9 @@ contract SupplyChain {
     }
 
     constructor() {
-        owner = msg.sender;
+        assembly {
+            sstore(owner.slot, caller())
+        }
     }
 
     /// @notice Registers a new product batch on-chain. Anyone with backend access
@@ -62,13 +67,52 @@ contract SupplyChain {
     /// in the application layer for this MVP.
     function createProduct(string calldata batchId, address farmer) external {
         require(!products[batchId].exists, "SupplyChain: batch already exists");
+        uint256 ts;
+        assembly {
+            ts := timestamp()
+        }
         products[batchId] = Product({
             batchId: batchId,
             farmer: farmer,
-            createdAt: block.timestamp,
+            createdAt: ts,
             exists: true
         });
-        emit ProductCreated(batchId, farmer, block.timestamp);
+        emit ProductCreated(batchId, farmer, ts);
+    }
+
+    /// @notice Registers a new product batch along with its SHA-256 metadata hash in a single transaction.
+    function createProductWithMetadata(
+        string calldata batchId,
+        address farmer,
+        bytes32 metadataHash
+    ) external {
+        require(!products[batchId].exists, "SupplyChain: batch already exists");
+        uint256 ts;
+        assembly {
+            ts := timestamp()
+        }
+        products[batchId] = Product({
+            batchId: batchId,
+            farmer: farmer,
+            createdAt: ts,
+            exists: true
+        });
+        if (metadataHash != bytes32(0)) {
+            productMetadataHashes[batchId] = metadataHash;
+            emit ProductMetadataAnchored(batchId, metadataHash, ts);
+        }
+        emit ProductCreated(batchId, farmer, ts);
+    }
+
+    /// @notice Anchors or updates the canonical SHA-256 metadata hash for an existing batch.
+    function setProductMetadataHash(string calldata batchId, bytes32 metadataHash) external {
+        require(products[batchId].exists, "SupplyChain: batch does not exist");
+        productMetadataHashes[batchId] = metadataHash;
+        uint256 ts;
+        assembly {
+            ts := timestamp()
+        }
+        emit ProductMetadataAnchored(batchId, metadataHash, ts);
     }
 
     /// @notice Appends a supply-chain event (e.g. DISPATCHED, RECEIVED_BY_RETAILER)
@@ -81,17 +125,21 @@ contract SupplyChain {
         string calldata location
     ) external {
         require(products[batchId].exists, "SupplyChain: batch does not exist");
+        uint256 ts;
+        assembly {
+            ts := timestamp()
+        }
         batchEvents[batchId].push(
             SupplyChainEvent({
                 batchId: batchId,
                 eventType: eventType,
                 participant: participant,
-                timestamp: block.timestamp,
+                timestamp: ts,
                 dataHash: dataHash,
                 location: location
             })
         );
-        emit SupplyChainEventAdded(batchId, eventType, participant, block.timestamp);
+        emit SupplyChainEventAdded(batchId, eventType, participant, ts);
     }
 
     /// @notice Records a certificate's SHA-256 hash for a batch.
@@ -102,12 +150,16 @@ contract SupplyChain {
         address verifier
     ) external {
         require(products[batchId].exists, "SupplyChain: batch does not exist");
+        uint256 ts;
+        assembly {
+            ts := timestamp()
+        }
         certificates[batchId] = Certificate({
             batchId: batchId,
             certificateId: certificateId,
             certificateHash: certificateHash,
             verifier: verifier,
-            timestamp: block.timestamp,
+            timestamp: ts,
             status: Status.VERIFIED
         });
         emit CertificateHashAdded(batchId, certificateId, certificateHash, verifier);

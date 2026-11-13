@@ -1,5 +1,8 @@
 export default {
   "nav.title": "آرگینک ٹریس (Organic Trace)",
+  "nav.schemes": "सरकारी स्कीम / سرکاری سکیم",
+  "nav.assistant": "AI मददगार",
+  "nav.voice": "आवाज़",
   "nav.login": "لاگ اِن",
   "nav.register": "رجسٹر کٔریو",
   "nav.farmerDashboard": "زمیندار ڈیش بورڈ",

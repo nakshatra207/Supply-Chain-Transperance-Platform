@@ -1,5 +1,8 @@
 export default {
   "nav.title": "जैविक-अनुवर्तनम् (Organic Trace)",
+  "nav.schemes": "सर्वकारीय-योजनाः",
+  "nav.assistant": "AI सहायकः",
+  "nav.voice": "वाणी",
   "nav.login": "प्रवेशः",
   "nav.register": "पञ्जीकरणम्",
   "nav.farmerDashboard": "कृषक-नियन्त्रणफलकम्",

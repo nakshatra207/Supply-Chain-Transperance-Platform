@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ওর্গানিক ট্রেস (Organic Trace)",
+  "nav.schemes": "সরকারগী স্কিমশিং",
+  "nav.assistant": "AI তেংবাংলোই",
+  "nav.voice": "খোঙজেল",
   "nav.login": "লগইন",
   "nav.register": "রেজিস্তর তৌবীয়ু",
   "nav.farmerDashboard": "লৌমী ড্যাশবোর্ড",

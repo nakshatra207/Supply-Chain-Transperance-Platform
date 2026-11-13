@@ -1,12 +1,33 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+import api from "./api.js";
 
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
-    const raw = localStorage.getItem("user");
-    return raw ? JSON.parse(raw) : null;
+    try {
+      const raw = localStorage.getItem("user");
+      return raw ? JSON.parse(raw) : null;
+    } catch {
+      return null;
+    }
   });
+
+  // Verify or silently refresh token on startup if user is in localStorage
+  useEffect(() => {
+    if (!user) return;
+    api
+      .get("/api/auth/me")
+      .then((res) => {
+        if (res.data?.id) {
+          setUser(res.data);
+          localStorage.setItem("user", JSON.stringify(res.data));
+        }
+      })
+      .catch(() => {
+        // Handled by api.js interceptor
+      });
+  }, []);
 
   const login = (token, userData) => {
     localStorage.setItem("token", token);

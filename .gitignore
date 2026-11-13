@@ -45,6 +45,9 @@ dist/
 build/
 backend/dist/
 frontend/dist/
+backend/src/native/*.o
+backend/src/native/*.node
+native/fast_launcher
 
 # --- Database & Persistent Storage ---
 *.sqlite
@@ -52,6 +55,7 @@ frontend/dist/
 *.db
 organic_trace_data/
 postgres_data/
+.ollama/
 
 # --- Logs, PIDs & Runtime State ---
 *.log

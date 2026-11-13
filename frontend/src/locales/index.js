@@ -1,4 +1,4 @@
-// Aggregated translation dictionary for all 22 official Eighth Schedule Indian languages + English
+// Aggregated translation dictionary for all 22 official Eighth Schedule Indian languages + regional languages + English
 import en from "./en.js";
 import hi from "./hi.js";
 import bn from "./bn.js";
@@ -22,6 +22,10 @@ import doi from "./doi.js";
 import mni from "./mni.js";
 import brx from "./brx.js";
 import sa from "./sa.js";
+import bho from "./bho.js";
+import bgc from "./bgc.js";
+import raj from "./raj.js";
+import hne from "./hne.js";
 
 export { INDIAN_LANGUAGES, POPULAR_LANGUAGE_CODES } from "./languages.js";
 
@@ -48,7 +52,11 @@ export const translations = {
   doi,
   mni,
   brx,
-  sa
+  sa,
+  bho,
+  bgc,
+  raj,
+  hne,
 };
 
 export default translations;

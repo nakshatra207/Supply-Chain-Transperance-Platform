@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ऑरगॅनिक ट्रेस (Organic Trace)",
+  "nav.schemes": "सरकारी योजना",
+  "nav.assistant": "AI सहाय्यक",
+  "nav.voice": "आवाज",
   "nav.login": "लॉगिन",
   "nav.register": "नोंदणी करा",
   "nav.farmerDashboard": "शेतकरी डॅशबोर्ड",

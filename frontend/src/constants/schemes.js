@@ -1,176 +1,165 @@
 export const INDIAN_GOV_SCHEMES = [
   {
-    id: 'pkvy',
-    name: 'Paramparagat Krishi Vikas Yojana (PKVY)',
-    shortName: 'PKVY',
-    category: 'Organic & Natural',
-    icon: '🌱',
-    themeColor: 'emerald',
-    description: 'Promotes certified organic farming through a cluster-based approach and Participatory Guarantee System (PGS) certification to revitalize soil health, reduce input costs, and enhance farmer income.',
-    benefit: '₹50,000/ha financial aid over 3 years for organic inputs & certification',
-    officialUrl: 'https://pgsindia-ncof.gov.in'
+    id: "pkvy",
+    schemeCode: "PKVY",
+    name: "Paramparagat Krishi Vikas Yojana (PKVY)",
+    description:
+      "Promotes organic farming through a cluster-based approach (20 Ha) with ₹31,500/ha DBT support and PGS-India certification.",
   },
   {
-    id: 'bpms',
-    name: 'Bharatiya Prakritik Krishi Paddhati (BPKP)',
-    shortName: 'BPKP',
-    category: 'Organic & Natural',
-    icon: '🌿',
-    themeColor: 'emerald',
-    description: 'A sub-scheme under PKVY promoting traditional indigenous chemical-free farming, cow dung-urine formulations (Jeevamrit, Beejamrit), and complete exclusion of synthetic chemicals.',
-    benefit: '₹12,200/ha financial aid for 3 years for continuous training & cluster formation',
-    officialUrl: 'https://naturalfarming.dac.gov.in'
+    id: "nmnf",
+    schemeCode: "NMNF",
+    name: "National Mission on Natural Farming (NMNF)",
+    description:
+      "A natural farming mission focusing on chemical-free agriculture, Bio-Input Resource Centres, and ₹4,000/acre/year input incentives.",
   },
   {
-    id: 'movcdner',
-    name: 'Mission Organic Value Chain Development for NER (MOVCDNER)',
-    shortName: 'MOVCDNER',
-    category: 'Organic & Natural',
-    icon: '🏔️',
-    themeColor: 'emerald',
-    description: 'Dedicated mission for the North Eastern Region to build end-to-end certified organic value chains connecting local Farmer Producer Organizations (FPOs) directly to domestic and international export markets.',
-    benefit: 'Subsidies for organic collection centers, cold storage, packaging & export logistics',
-    officialUrl: 'https://movcd.dac.gov.in'
+    id: "pmksy",
+    schemeCode: "PMKSY",
+    name: "Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)",
+    description:
+      'Enhances farm productivity through improved water management and "Per Drop More Crop" micro-irrigation subsidies (45%–55%).',
   },
   {
-    id: 'midh',
-    name: 'Mission for Integrated Development of Horticulture (MIDH)',
-    shortName: 'MIDH',
-    category: 'Organic & Natural',
-    icon: '🍎',
-    themeColor: 'emerald',
-    description: 'Holistic growth of the horticulture sector covering organic fruits, vegetables, mushrooms, spices, and aromatic plants with post-harvest management and polyhouses.',
-    benefit: 'Capital assistance up to 40%-50% for modern nurseries, pack-houses & cold chains',
-    officialUrl: 'https://midh.gov.in'
+    id: "aif",
+    schemeCode: "AIF",
+    name: "Agriculture Infrastructure Fund (AIF)",
+    description:
+      "Provides 3% interest subvention and credit guarantee on loans up to ₹2 Crore for warehouses, cold stores, and organic post-harvest units.",
   },
   {
-    id: 'pm-kisan',
-    name: 'Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)',
-    shortName: 'PM-KISAN',
-    category: 'Income & Credit',
-    icon: '💰',
-    themeColor: 'blue',
-    description: 'Direct income support scheme providing ₹6,000 per year in three equal four-monthly installments directly into the Aadhaar-linked bank accounts of landholding farmer families across India.',
-    benefit: '₹6,000 per year via automated Direct Benefit Transfer (DBT)',
-    officialUrl: 'https://pmkisan.gov.in'
+    id: "pmkisan",
+    schemeCode: "PM-KISAN",
+    name: "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    description:
+      "Direct income support of ₹6,000/year in three installments via DBT for all landholding farmer families.",
   },
   {
-    id: 'kcc',
-    name: 'Kisan Credit Card (KCC) Scheme',
-    shortName: 'KCC',
-    category: 'Income & Credit',
-    icon: '💳',
-    themeColor: 'blue',
-    description: 'Ensures timely and hassle-free institutional short-term credit for farmers to meet crop cultivation expenses, post-harvest costs, and working capital for dairy, fisheries, and allied farming.',
-    benefit: 'Short-term crop credit up to ₹3 Lakh at an effective interest rate of just 4%',
-    officialUrl: 'https://www.myscheme.gov.in/schemes/kcc'
+    id: "fpo10k",
+    schemeCode: "FPO-10K",
+    name: "Formation & Promotion of 10,000 FPOs",
+    description:
+      "Supports farmer collectives with up to ₹18 Lakh management grant, ₹15 Lakh matching equity grant, and credit guarantees.",
   },
-  {
-    id: 'pmkmy',
-    name: 'Pradhan Mantri Kisan Maandhan Yojana (PM-KMY)',
-    shortName: 'PM-KMY',
-    category: 'Income & Credit',
-    icon: '🤝',
-    themeColor: 'blue',
-    description: 'Voluntary old-age social security pension scheme providing assured monthly pension of ₹3,000 to small and marginal farmers on attaining 60 years of age.',
-    benefit: 'Assured ₹3,000 monthly pension for life with 50% family pension support',
-    officialUrl: 'https://maandhan.in'
-  },
-  {
-    id: 'pmksy',
-    name: 'Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)',
-    shortName: 'PMKSY',
-    category: 'Water & Soil',
-    icon: '💧',
-    themeColor: 'cyan',
-    description: 'Focuses on "Har Khet Ko Pani" and "Per Drop More Crop" through precision micro-irrigation, sprinkler systems, and water use efficiency to boost agricultural output.',
-    benefit: 'Up to 55% subsidy on drip and sprinkler irrigation for small and marginal farmers',
-    officialUrl: 'https://pmksy.gov.in'
-  },
-  {
-    id: 'shc',
-    name: 'Soil Health Card Scheme (SHC)',
-    shortName: 'SHC',
-    category: 'Water & Soil',
-    icon: '🧪',
-    themeColor: 'cyan',
-    description: 'Issues comprehensive 12-parameter soil health report cards to farmers with customized crop-wise dosage recommendations for organic manures and micro-nutrients to restore soil fertility.',
-    benefit: 'Free soil testing every 2 years with tailored organic soil restorative advice',
-    officialUrl: 'https://soilhealth.dac.gov.in'
-  },
-  {
-    id: 'pmfby',
-    name: 'Pradhan Mantri Fasal Bima Yojana (PMFBY)',
-    shortName: 'PMFBY',
-    category: 'Insurance & Markets',
-    icon: '🛡️',
-    themeColor: 'amber',
-    description: 'Comprehensive, low-premium crop insurance scheme shielding farmers against non-preventable natural risks, drought, unseasonal rainfall, floods, and post-harvest losses.',
-    benefit: 'Minimal premium: 1.5% for Rabi, 2% for Kharif crops; remaining paid by Govt',
-    officialUrl: 'https://pmfby.gov.in'
-  },
-  {
-    id: 'enam',
-    name: 'National Agriculture Market (e-NAM)',
-    shortName: 'e-NAM',
-    category: 'Insurance & Markets',
-    icon: '📈',
-    themeColor: 'amber',
-    description: 'Pan-India electronic trading portal integrating over 1,300 APMC mandis to create a unified national digital marketplace for agricultural commodities with transparent online bidding.',
-    benefit: 'Direct access to national buyers, electronic payments, and quality assaying',
-    officialUrl: 'https://enam.gov.in'
-  },
-  {
-    id: 'aif',
-    name: 'Agriculture Infrastructure Fund (AIF)',
-    shortName: 'AIF',
-    category: 'Infra & Tech',
-    icon: '🏭',
-    themeColor: 'purple',
-    description: 'Financing facility providing ₹1 Lakh Crore for post-harvest management infrastructure including cold chains, modern silos, sorting-grading units, and community farming assets.',
-    benefit: '3% p.a. interest subvention on bank loans up to ₹2 Crore for up to 7 years',
-    officialUrl: 'https://agriinfra.dac.gov.in'
-  },
-  {
-    id: 'rkvy',
-    name: 'Rashtriya Krishi Vikas Yojana (RKVY-RAFTAAR)',
-    shortName: 'RKVY',
-    category: 'Infra & Tech',
-    icon: '🚀',
-    themeColor: 'purple',
-    description: 'Empowers agri-business entrepreneurship, incubation centers, and innovative startups by offering seed capital grants and mentorship to youth in agriculture.',
-    benefit: 'Grants up to ₹25 Lakhs for innovative agri-startups and FPO business plans',
-    officialUrl: 'https://rkvy.nic.in'
-  },
-  {
-    id: 'smam',
-    name: 'Sub-Mission on Agricultural Mechanization (SMAM)',
-    shortName: 'SMAM',
-    category: 'Infra & Tech',
-    icon: '🚜',
-    themeColor: 'purple',
-    description: 'Promotes modern agricultural machinery adoption and sets up Custom Hiring Centers (CHCs) to provide smallholder farmers affordable rental access to tractors and harvesters.',
-    benefit: '40% to 50% capital subsidy on farm machinery procurement and rental centers',
-    officialUrl: 'https://agrimachinery.nic.in'
-  },
-  {
-    id: 'pmfme',
-    name: 'PM Formalisation of Micro Food Processing Enterprises (PMFME)',
-    shortName: 'PMFME',
-    category: 'Infra & Tech',
-    icon: '🥫',
-    themeColor: 'purple',
-    description: 'Provides technical, financial, and business support for micro food enterprises, Farmer Producer Organizations (FPOs), and SHGs under the One District One Product (ODOP) banner.',
-    benefit: '35% credit-linked capital subsidy up to ₹10 Lakh per enterprise',
-    officialUrl: 'https://pmfme.mofpi.gov.in'
-  }
 ];
 
-export const SCHEME_CATEGORIES = [
-  'All',
-  'Organic & Natural',
-  'Income & Credit',
-  'Water & Soil',
-  'Insurance & Markets',
-  'Infra & Tech'
+export const SCHEME_CATEGORY_META = {
+  ORGANIC_FARMING: {
+    label: "Organic Farming",
+    labelHi: "जैविक एवं प्राकृतिक खेती",
+    icon: "🌱",
+  },
+  IRRIGATION: {
+    label: "Irrigation",
+    labelHi: "सिंचाई एवं जल प्रबंधन",
+    icon: "💧",
+  },
+  CERTIFICATION: {
+    label: "Certification",
+    labelHi: "जैविक प्रमाणन (PGS/NPOP)",
+    icon: "📜",
+  },
+  EQUIPMENT: {
+    label: "Equipment",
+    labelHi: "कृषि यंत्र एवं उपकरण",
+    icon: "🚜",
+  },
+  INFRASTRUCTURE: {
+    label: "Infrastructure",
+    labelHi: "कृषि अवसंरचना",
+    icon: "🏗️",
+  },
+  STORAGE: {
+    label: "Storage & Cold Chain",
+    labelHi: "भंडारण एवं कोल्ड स्टोरेज",
+    icon: "🏬",
+  },
+  TRANSPORTATION: {
+    label: "Transportation",
+    labelHi: "परिवहन एवं लॉजिस्टिक्स",
+    icon: "🚚",
+  },
+  FPO: {
+    label: "FPOs & Cooperatives",
+    labelHi: "एफपीओ एवं सहकारी समितियां",
+    icon: "🤝",
+  },
+  FOOD_PROCESSING: {
+    label: "Food Processing",
+    labelHi: "खाद्य प्रसंस्करण",
+    icon: "🏭",
+  },
+  FINANCIAL_ASSISTANCE: {
+    label: "Financial Assistance",
+    labelHi: "वित्तीय सहायता एवं ऋण",
+    icon: "₹",
+  },
+  INSURANCE: {
+    label: "Crop Insurance",
+    labelHi: "फसल बीमा",
+    icon: "🛡️",
+  },
+  MARKET_ACCESS: {
+    label: "Market Access",
+    labelHi: "बाजार पहुंच एवं मंडी",
+    icon: "📈",
+  },
+};
+
+export const BENEFICIARY_TYPE_META = {
+  INDIVIDUAL_FARMER: { label: "Individual Farmer", labelHi: "व्यक्तिगत किसान" },
+  SMALL_MARGINAL_FARMER: { label: "Small & Marginal Farmer", labelHi: "लघु एवं सीमांत किसान" },
+  ORGANIC_FARMER: { label: "Organic / Natural Farmer", labelHi: "जैविक / प्राकृतिक किसान" },
+  FPO: { label: "FPO / FPC", labelHi: "एफपीओ (किसान उत्पादक संगठन)" },
+  COOPERATIVE: { label: "Cooperative / PACS", labelHi: "सहकारी समिति / पैक्स" },
+  AGRI_ENTREPRENEUR: { label: "Agri-Entrepreneur", labelHi: "कृषि उद्यमी" },
+  MSME: { label: "Food Processing MSME", labelHi: "सूक्ष्म एवं लघु उद्यम (MSME)" },
+  SHG: { label: "Self-Help Group (SHG)", labelHi: "स्वयं सहायता समूह (SHG)" },
+  STARTUP: { label: "Agri-Startup", labelHi: "कृषि स्टार्टअप" },
+};
+
+export const STATUS_BADGE_META = {
+  OPEN: {
+    label: "Open",
+    labelHi: "आवेदन चालू (Open)",
+    className: "bg-leaf-100 text-leaf-800 border-leaf-300",
+  },
+  UPCOMING: {
+    label: "Upcoming",
+    labelHi: "आगामी (Upcoming)",
+    className: "bg-blue-100 text-blue-800 border-blue-300",
+  },
+  CLOSED: {
+    label: "Closed",
+    labelHi: "बंद (Closed)",
+    className: "bg-stone-200 text-stone-700 border-stone-300",
+  },
+  STATUS_UNVERIFIED: {
+    label: "Status Unverified",
+    labelHi: "स्थिति असत्यापित",
+    className: "bg-amber-100 text-amber-800 border-amber-300",
+  },
+};
+
+export const INDIAN_STATES_LIST = [
+  "ALL",
+  "Haryana",
+  "Punjab",
+  "North East",
+  "Uttar Pradesh",
+  "Maharashtra",
+  "Rajasthan",
+  "Madhya Pradesh",
+  "Gujarat",
+  "Himachal Pradesh",
+  "Uttarakhand",
+  "Bihar",
+  "Karnataka",
+  "Tamil Nadu",
+  "Telangana",
+  "Andhra Pradesh",
+  "West Bengal",
+  "Odisha",
+  "Assam",
+  "Sikkim",
 ];

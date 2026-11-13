@@ -1,16 +1,121 @@
-version: "3.9"
 services:
+  ollama:
+    image: ollama/ollama:latest
+    container_name: organic_trace_ollama
+    restart: unless-stopped
+    volumes:
+      - organic_trace_ollama:/root/.ollama
+    ports:
+      - "${OLLAMA_PORT:-11435}:11434"
+    networks:
+      - organic_trace_net
+
   postgres:
     image: postgres:16-alpine
     container_name: organic_trace_db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: organic
-      POSTGRES_PASSWORD: organic
-      POSTGRES_DB: organic_trace
+      POSTGRES_USER: ${POSTGRES_USER:-organic}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-organic}
+      POSTGRES_DB: ${POSTGRES_DB:-organic_trace}
     ports:
-      - "5432:5432"
+      - "${POSTGRES_PORT:-5432}:5432"
     volumes:
       - organic_trace_data:/var/lib/postgresql/data
+    networks:
+      - organic_trace_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-organic} -d ${POSTGRES_DB:-organic_trace}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+  hardhat:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: organic_trace_chain
+    restart: unless-stopped
+    user: "node"
+    working_dir: /app/contracts
+    command: ["npx", "hardhat", "node", "--hostname", "0.0.0.0"]
+    ports:
+      - "${HARDHAT_PORT:-8545}:8545"
+    networks:
+      - organic_trace_net
+    healthcheck:
+      test: ["CMD", "/app/native/fast_launcher", "wait-rpc", "127.0.0.1", "8545", "2000"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: organic_trace_backend
+    restart: unless-stopped
+    user: "node"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      hardhat:
+        condition: service_healthy
+    environment:
+      NODE_ENV: ${NODE_ENV:-production}
+      PORT: 5000
+      DATABASE_URL: postgresql://${POSTGRES_USER:-organic}:${POSTGRES_PASSWORD:-organic}@postgres:5432/${POSTGRES_DB:-organic_trace}?schema=public
+      JWT_SECRET: ${JWT_SECRET:-replace_with_strong_random_jwt_secret}
+      BLOCKCHAIN_RPC_URL: http://hardhat:8545
+      OLLAMA_BASE_URL: http://ollama:11434
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-llama3.2:latest}
+    ports:
+      - "${BACKEND_PORT:-5000}:5000"
+    volumes:
+      - organic_trace_ledger:/app/backend/src/data
+    networks:
+      - organic_trace_net
+    command: >
+      sh -c "cd /app/backend && npx prisma db push --skip-generate && node prisma/seed.js && node src/index.js"
+    healthcheck:
+      test: ["CMD", "/app/native/fast_launcher", "wait-http", "127.0.0.1", "5000", "/api/health", "\"status\":\"ok\"", "3000"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: organic_trace_frontend
+    restart: unless-stopped
+    user: "node"
+    working_dir: /app/frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    environment:
+      VITE_API_URL: ${VITE_API_URL:-http://localhost:5000}
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    networks:
+      - organic_trace_net
+    command: ["npx", "vite", "preview", "--host", "0.0.0.0", "--port", "5173"]
+    healthcheck:
+      test: ["CMD", "/app/native/fast_launcher", "wait-tcp", "127.0.0.1", "5173", "2000"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
 volumes:
+  organic_trace_ollama:
   organic_trace_data:
+  organic_trace_ledger:
+
+networks:
+  organic_trace_net:
+    driver: bridge

@@ -1,0 +1,687 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R] /Count 10 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+endobj
+7 0 obj
+<< /Length 5117 >>
+stream
+BT
+0.08 0.33 0.18 rg /F2 18.0 Tf 1 0 0 1 48.0 745.0 Tm (ORGANIC TRACE PLATFORM \(v2.0.0\)) Tj
+0.15 0.25 0.20 rg /F2 11.0 Tf 1 0 0 1 48.0 721.0 Tm (Complete Software Engineering, DSA Optimization, Native C11/C++20/ASM, QA & Docker Report) Tj
+0.30 0.30 0.30 rg /F1 9.0 Tf 1 0 0 1 48.0 703.0 Tm (===============================================================================================) Tj
+0.08 0.33 0.18 rg /F2 13.0 Tf 1 0 0 1 48.0 687.0 Tm (TABLE OF CONTENTS \(26 REQUIRED SECTIONS\)) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 669.0 Tm (  1. Project Title Page) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 657.0 Tm (  2. Executive Summary) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 645.0 Tm (  3. Project Objectives) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 633.0 Tm (  4. Problem Statement) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 621.0 Tm (  5. Existing System Analysis) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 609.0 Tm (  6. Proposed System) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 597.0 Tm (  7. System Architecture) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 585.0 Tm (  8. Technology Stack) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 573.0 Tm (  9. Software Requirements) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 561.0 Tm (  10. Hardware Requirements) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 549.0 Tm (  11. DSA Implementation and Complexity Analysis) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 537.0 Tm (  12. Performance Optimization Techniques) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 525.0 Tm (  13. Security Implementation) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 513.0 Tm (  14. Database Architecture) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 501.0 Tm (  15. API Documentation) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 489.0 Tm (  16. Testing Methodology) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 477.0 Tm (  17. Test Cases and Results) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 465.0 Tm (  18. Performance Benchmarking) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 453.0 Tm (  19. Docker Architecture) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 441.0 Tm (  20. Cross-Platform Deployment Instructions) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 429.0 Tm (  21. Installation Guide) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 417.0 Tm (  22. User Guide) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 405.0 Tm (  23. Known Limitations) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 393.0 Tm (  24. Future Improvements) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 381.0 Tm (  25. Conclusion) Tj
+0.10 0.10 0.10 rg /F1 9.0 Tf 1 0 0 1 56.0 369.0 Tm (  26. References) Tj
+0.30 0.30 0.30 rg /F1 9.0 Tf 1 0 0 1 48.0 357.0 Tm (===============================================================================================) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 339.0 Tm (1. PROJECT TITLE PAGE) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 321.0 Tm (Project Title: Organic Trace - Blockchain-Based Organic Farming Supply Chain Transparency,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 308.0 Tm (Indian Government Schemes Discovery & Native C11/C++20/x86_64 SIMD Accelerated Platform) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 290.0 Tm (Subtitle: Complete Software Engineering Audit, Data Structures & Algorithms \(DSA\)) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 277.0 Tm (Optimization, Native Hardware Acceleration, Security Hardening, Automated QA &) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 264.0 Tm (Cross-Platform Containerization Report) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 246.0 Tm (Version: 2.0.0 \(Production-Hardened Release\)) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 228.0 Tm (Date: November 2026) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 210.0 Tm (Target Platforms: Linux \(Debian, Ubuntu, Fedora, Arch\), Windows 10/11, macOS \(Intel & Apple) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 197.0 Tm (Silicon\), FreeBSD \(Native / Podman / Linux VM\)) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 179.0 Tm (Supported CPU Architectures: AMD64 \(x86_64 with SHA-NI, SSSE3, SSE4.2, XMM SIMD\) & ARM64) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 166.0 Tm (\(AArch64 / Apple Silicon portable C11/C++20 engine\)) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 148.0 Tm (2. EXECUTIVE SUMMARY) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 130.0 Tm (Organic Trace is an end-to-end agricultural supply chain transparency and farmer empowerment) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 117.0 Tm (platform designed to solve two critical challenges in the organic farming ecosystem: \(1\)) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 104.0 Tm (counterfeit organic claims and opaque farm-to-fork custody trails, and \(2\) fragmented) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 91.0 Tm (awareness of Central and State Government agricultural subsidies among Indian farmers and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 78.0 Tm (Farmer Producer Organizations \(FPOs\).) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 1 of 10) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 6666 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 745.0 Tm (The platform combines an Ethereum/Hardhat Solidity smart contract \(SupplyChain.sol\) and a) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 732.0 Tm (self-healing SHA-256 cryptographic hash-chain ledger with a PostgreSQL relational database) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 719.0 Tm (\(managed via Prisma ORM\), a Node.js/Express REST & SSE backend, a custom Native) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 706.0 Tm (C11/C++20/x86_64 SIMD Assembly N-API accelerator \(organic_native.node\), and a 27-language) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 693.0 Tm (React 18 + Vite 5 frontend featuring hands-free voice navigation and a hybrid RAG AI) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 680.0 Tm (Assistant.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 662.0 Tm (During this comprehensive engineering audit, every layer of the stack was inspected,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 649.0 Tm (optimized, debugged, and verified. Critical authentication and authorization vulnerabilities) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 636.0 Tm (were remediated, core data structures were upgraded to optimal time/space complexities) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 623.0 Tm (\(Binary Min-Heap Priority Queues, Inverted Index with Prefix Trie, Binary SHA-256 Merkle) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 610.0 Tm (Inclusion Proofs, Directed Acyclic Graph custody validation, and O\(1\) LRU+TTL caches\),) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 597.0 Tm (cross-architecture ARM64/macOS/FreeBSD compatibility was added to the native) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 584.0 Tm (C11/C++20/Assembly engine, the AI Assistant cold-start latency was improved by 1,141x \(from) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 571.0 Tm (60,130.75 ms to 52.67 ms\), the frontend initial bundle was reduced by 60.8% via route-level) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 558.0 Tm (code splitting, and 27 automated test suites \(Smart Contracts, Backend) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 545.0 Tm (API/DSA/Security/Load, and Frontend Voice/i18n\) were executed with a 100% pass rate.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 527.0 Tm (3. PROJECT OBJECTIVES) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 509.0 Tm (* Immutable Farm-to-Fork Traceability: Anchor every crop batch registration, PGS-India /) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 496.0 Tm (NPOP organic certificate SHA-256 digest, and supply-chain custody event on an) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 483.0 Tm (Ethereum-compatible smart contract \(SupplyChain.sol\) and local hash-chain ledger.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 470.0 Tm (* Real-Time Cryptographic Tamper Detection: Recompute batch metadata and certificate) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 457.0 Tm (SHA-256 hashes on every consumer QR scan \(/trace/:batchId\) and verify Binary Merkle Tree) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 444.0 Tm (inclusion proofs in O\(log N\) time to detect unauthorized database modifications) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 431.0 Tm (immediately.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 418.0 Tm (* Hardware-Accelerated Cryptographic & Vector Operations: Leverage C11 Intel/AMD SHA-NI) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 405.0 Tm (instructions, x86_64 SSSE3/SSE4.2/SIMD assembly routines, and C++20 off-heap caching) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 392.0 Tm (with automatic portable fallbacks for ARM64.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 379.0 Tm (* Verified Government Schemes Discovery & Eligibility Matching: Provide a curated,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 366.0 Tm (SSRF-safe directory of 17+ Indian Central and State Government agricultural schemes with) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 353.0 Tm (personalized SIMD-scored eligibility matching.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 340.0 Tm (* Inclusive Multilingual & Voice Accessibility: Support 27 Indian regional languages,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 327.0 Tm (speech-to-text voice command navigation, text-to-speech read-aloud, and a bilingual) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 314.0 Tm (\(English/Hindi\) RAG AI Assistant.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 301.0 Tm (* Production-Grade Security, QA & Portability: Enforce cryptographic JWT verification,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 288.0 Tm (Role-Based and Object-Level Access Control \(RBAC & BOLA protection\), automated CI/CD) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 275.0 Tm (testing, and multi-stage non-root Docker deployment across Windows, macOS, Linux, and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 262.0 Tm (FreeBSD.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 249.0 Tm (4. PROBLEM STATEMENT) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 231.0 Tm (1. Trust Deficit in Organic Supply Chains: Consumers pay a 30% to 100% premium for certified) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 218.0 Tm (organic produce \(such as Basmati rice or Lakadong turmeric\) but lack a verifiable mechanism) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 205.0 Tm (to confirm whether the product originated from a certified organic farm or if database) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 192.0 Tm (records were altered after harvest.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 174.0 Tm (2. High Computational Overhead of Cryptographic Verification: Base64-encoded PDF/image) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 161.0 Tm (certificate uploads \(up to 5 MB\) and repeated Merkle root/hash computations in high-level) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 148.0 Tm (scripting languages allocate large intermediate heap buffers and trigger frequent garbage) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 135.0 Tm (collection pauses.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 117.0 Tm (3. Information Asymmetry in Government Agricultural Schemes: Small and marginal farmers) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 104.0 Tm (often miss out on major schemes such as PKVY \(Rs. 31,500/ha organic support\), PM-KISAN \(Rs.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 91.0 Tm (6,000/yr\), AIF \(3% interest subvention up to Rs. 2 Crore\), and PMKSY \(45-55%) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 78.0 Tm (micro-irrigation subsidy\) due to complex eligibility rules and language barriers.) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 2 of 10) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 6911 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 745.0 Tm (4. Security & Scalability Risks in Naive Implementations: Unverified token decoding, missing) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 732.0 Tm (object-level ownership checks, unindexed relational queries, sequential RPC calls, and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 719.0 Tm (monolithic frontend bundles degrade security and user experience under production load.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 701.0 Tm (5. EXISTING SYSTEM ANALYSIS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 683.0 Tm (Prior to our engineering overhaul, a thorough technical audit of the existing repository) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 670.0 Tm (revealed both strong foundational features and several critical architectural, security,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 657.0 Tm (compatibility, and performance bottlenecks:) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 639.0 Tm (Domain | Existing SystemFinding | Severity | Impact) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 626.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 615.0 Tm (Authentication \(auth.js\) | Fallback to unsigned jwt.decode\(\) and X-User-Email header spoofing;) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 603.5 Tm (invalid tokens fell back to primary FARMER account | CRITICAL | Complete authentication bypass) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 592.0 Tm (& privilege escalation) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 580.5 Tm (Authorization \(batches.js\) | POST /api/batches/:batchId/certificate checked role=FARMER but) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 569.0 Tm (not batch.farmerId === req.user.id | HIGH | Broken Object-Level Authorization \(BOLA / IDOR\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 557.5 Tm (Data Privacy \(batches/events\) | GET /api/batches/:batchId and /events included full User) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 546.0 Tm (objects with bcrypt passwordHash | HIGH | Sensitive credential hash exposure in JSON API) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 534.5 Tm (AI Assistant \(llmAssistantService\) | Auto mode waited up to 90s on cold local CPU Ollama) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 523.0 Tm (inference before falling back to RAG | HIGH | 60,130 ms request latency stall in API & tests) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 511.5 Tm (Native portability \(fast_asm.S\) | Assembly symbols only emitted under #ifdef __x86_64__;) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 500.0 Tm (Makefile hardcoded -march=native; Merkle tree capped at 128 leaves | MEDIUM | Linker failure) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 488.5 Tm (on ARM64 / Apple Silicon & silent leaf truncation >128) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 477.0 Tm (Blockchain I/O \(blockchain.js\) | Synchronous fs.readFileSync + JSON.parse on every call;) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 465.5 Tm (sequential for-loop RPC getEvent\(\) calls | MEDIUM | Redundant disk I/O and O\(E\) sequential RPC) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 454.0 Tm (latency) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 442.5 Tm (Database \(schema.prisma\) | Missing composite and foreign-key indexes on Batch,) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 431.0 Tm (SupplyChainEvent, GovernmentScheme, SchemeSyncLog | MEDIUM | Full table scans as dataset grows) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 419.5 Tm (Frontend Bundle \(App.jsx\) | All 11 pages statically imported into a single 577.36 kB JS bundle) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 408.0 Tm (| LOW | Slower initial page load & Vite >500kB chunk warning) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 390.5 Tm (6. PROPOSED SYSTEM) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 372.5 Tm (The improved Organic Trace 2.0 architecture preserves 100% of existing user-facing workflows) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 359.5 Tm (while introducing six major engineering upgrades:) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 341.5 Tm (1. Cryptographically Hardened Zero-Trust Auth Pipeline: JWTs are strictly verified against) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 328.5 Tm (HMAC-SHA256 signatures. Seamless session recovery after database re-seeding is permitted) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 315.5 Tm (only when jwt.verify\(token, secret, { ignoreExpiration: true }\) proves cryptographic) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 302.5 Tm (authenticity. All BOLA/IDOR vectors and passwordHash leaks are eliminated.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 284.5 Tm (2. Multi-Architecture C11/C++20/Assembly Accelerator: Retains x86_64 SHA-NI, SSSE3, SSE4.2,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 271.5 Tm (and XMM SIMD assembly on AMD64 while adding portable C11 fallbacks for ARM64/AArch64,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 258.5 Tm (dynamic heap allocation for Merkle trees with >128 leaves, and POSIX socket portability for) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 245.5 Tm (macOS and FreeBSD.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 227.5 Tm (3. Dedicated DSA Engine \(dsaEngine.js\): Implements a Binary Min-Heap Priority Queue for O\(N) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 214.5 Tm (log K\) Top-K selection, an Inverted Index + Prefix Trie for O\(1\) token and O\(L\) prefix) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 201.5 Tm (search, an O\(log N\) Merkle Inclusion Proof generator/verifier, and a Directed Acyclic Graph) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 188.5 Tm (\(DAG\) custody analyzer using Kahn's topological sort.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 170.5 Tm (4. Sub-Millisecond Ledger & Database Caching: Introduces mtime-aware in-memory ledger) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 157.5 Tm (caching, parallel Promise.all\(\) EVM RPC event fetching, memoized scheme seeding, and 8) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 144.5 Tm (strategic PostgreSQL B-Tree indexes.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 126.5 Tm (5. Warm-Aware Hybrid AI Router: Detects whether an Ollama model is actively loaded in RAM) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 113.5 Tm (via /api/ps before attempting local inference in auto mode, cutting response latency from) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 100.5 Tm (60.13 seconds to 36-52 ms.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 82.5 Tm (6. Route-Split Frontend & Multi-Stage Non-Root Dockerization: Splits the React bundle into) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 69.5 Tm (14 lazy chunks \(reducing the entry chunk by 60.8%\) and packages the stack into a) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 3 of 10) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 8054 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 745.0 Tm (multi-stage, non-root Dockerfile and Docker Compose orchestration.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 727.0 Tm (7. SYSTEM ARCHITECTURE) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 709.0 Tm (Organic Trace follows a modular 4-tier architecture separating Presentation \(React 18 +) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 696.0 Tm (Voice/i18n\), Application & Native Acceleration \(Express + C11/C++20/ASM N-API Addon + DSA) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 683.0 Tm (Engine\), Persistence \(PostgreSQL 16 + Prisma\), and Immutable Trust \(Hardhat EVM Smart) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 670.0 Tm (Contract + SHA-256 Hash-Chain Ledger\).) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 652.0 Tm (+-----------------------------------------------------------------------------------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 641.5 Tm (|                        PRESENTATION TIER \(React 18 + Vite 5\)                      |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 631.0 Tm (|  +-----------------+  +--------------------+  +----------------+  +------------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 620.5 Tm (|  | Farmer & Partner|  | Public QR Consumer |  | 17+ Government |  | 27-Lang    |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 610.0 Tm (|  | Dashboards      |  | Traceability View  |  | Schemes Hub    |  | Voice + AI |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 599.5 Tm (|  +--------+--------+  +---------+----------+  +--------+-------+  +-----+------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 589.0 Tm (+-----------|---------------------|----------------------|----------------|---------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 578.5 Tm (            | HTTPS / REST JSON   | Public GET /trace    | REST           | SSE/JSON) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 568.0 Tm (            v                     v                      v                v) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 557.5 Tm (+-----------------------------------------------------------------------------------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 547.0 Tm (|                 APPLICATION & NATIVE ACCELERATION TIER \(Node.js 20\)               |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 536.5 Tm (|  +-----------------------------------------------------------------------------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 526.0 Tm (|  | Express Security Layer: Helmet + CORS + RateLimit + Zod + Hardened JWT RBAC |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 515.5 Tm (|  +-----------------------------------------------------------------------------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 505.0 Tm (|  +------------------------------------+   +------------------------------------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 494.5 Tm (|  | DSA Engine \(dsaEngine.js\)          |   | Native Addon \(organic_native.node\) |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 484.0 Tm (|  | - MinHeap Top-K: O\(N log K\)        |   | - C11 SHA-NI + Base64 Streamer     |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 473.5 Tm (|  | - InvertedIndex + PrefixTrie       |   | - x86_64 ASM SSSE3 Hex & CRC32C    |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 463.0 Tm (|  | - MerkleTree Proof: O\(log N\)       |   | - x86_64 SIMD pmaddwd Dot Product  |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 452.5 Tm (|  | - SupplyChainStageDAG \(Kahn's\)     |   | - C++20 Shared-Mutex LRU+TTL Cache |  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 442.0 Tm (|  +------------------------------------+   +------------------------------------+  |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 431.5 Tm (+----------------------------+-----------------------------------+------------------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 421.0 Tm (                             |                                   |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 410.5 Tm (           Prisma ORM \(SQL\)  |                                   | Ethers.js v6 JSON-RPC) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 400.0 Tm (                             v                                   v) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 389.5 Tm (+---------------------------------------+   +---------------------------------------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 379.0 Tm (|     RELATIONAL PERSISTENCE TIER       |   |     BLOCKCHAIN & LEDGER TRUST TIER    |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 368.5 Tm (|  PostgreSQL 16 \(Indexed Tables\)       |   |  1. Hardhat EVM \(SupplyChain.sol\)     |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 358.0 Tm (|  - User, Batch, SupplyChainEvent      |   |  2. Local Cryptographic Hash-Chain    |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 347.5 Tm (|  - GovernmentScheme, SavedScheme      |   |     \(localChainLedger.json\)           |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 337.0 Tm (|  - BatchSchemeLink, UserPreference    |   |  3. 3-Way Auto-Healing Synchronizer   |) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 326.5 Tm (+---------------------------------------+   +---------------------------------------+) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 311.0 Tm (8. TECHNOLOGY STACK) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 293.0 Tm (Layer | Technology / Library | Version / Standard | Purpose) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 280.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 269.0 Tm (Native Low-Level | C11 \(sha256_engine.c\) | ISO C11 \(-O3\) | Hardware SHA-NI SHA-256, streaming) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 257.5 Tm (Base64 decode, Merkle Tree root) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 246.0 Tm (Native Assembly | GAS x86_64 Assembly \(fast_asm.S\) | SSSE3 / SSE4.2 / XMM | Vectorized pshufb) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 234.5 Tm (hex, constant-time compare, CRC32C, SIMD pmaddwd) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 223.0 Tm (Native Bridge & Cache | C++20 N-API \(addon.cpp, fast_launcher.cpp\) | ISO C++20 \(-O3\) |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 211.5 Tm (Node-API bridge, std::shared_mutex off-heap LRU+TTL cache, socket engine) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 200.0 Tm (Smart Contracts | Solidity + Hardhat + Ethers.js | Solidity 0.8.24 / Ethers v6 | Immutable) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 188.5 Tm (batch, metadataHash, certificateHash & custody event storage) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 177.0 Tm (Backend Runtime | Node.js + Express.js | Node v20/v24 + Express 4.19 | REST API, SSE) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 165.5 Tm (streaming, security middleware, 3-way blockchain sync) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 154.0 Tm (Database & ORM | PostgreSQL + Prisma ORM | PostgreSQL 16 + Prisma 5.22 | Relational storage) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 142.5 Tm (with B-Tree composite indexes and type-safe queries) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 131.0 Tm (Validation & Security | Zod + jsonwebtoken + bcryptjs + Helmet | Zod 3.23 / JWT 9.0 | Schema) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 119.5 Tm (validation, HMAC-SHA256 JWT auth, password hashing, HTTP headers) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 108.0 Tm (Frontend UI | React + Vite + Tailwind CSS | React 18.3 + Vite 5.4 | Code-split SPA, QR code) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 96.5 Tm (generation \(qrcode.react\), dark/light mode) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 85.0 Tm (DevOps & Containers | Docker + Docker Compose + GitHub Actions | Buildx Multi-Arch |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 73.5 Tm (Multi-stage non-root containers and automated CI/CD test pipeline) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 4 of 10) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 6991 >>
+stream
+BT
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 745.0 Tm (9. SOFTWARE REQUIREMENTS) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 727.0 Tm (Component | Minimum Requirement | Recommended Production Specification) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 714.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 703.0 Tm (Operating System | Linux \(Kernel 5.4+\), Windows 10, macOS 12+, FreeBSD 13+ | Ubuntu 24.04 LTS) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 691.5 Tm (/ Debian 12 Bookworm / Windows 11 WSL2) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 680.0 Tm (Node.js & npm | Node.js >= 18.18.0, npm >= 9.0 | Node.js 20 LTS or 24.x, npm 10+) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 668.5 Tm (C / C++ Toolchain | GCC >= 10 or Clang >= 13, GNU Make | GCC 14.2+ / Clang 16+ with C11 &) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 657.0 Tm (C++20 support) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 645.5 Tm (Database Engine | PostgreSQL >= 14 | PostgreSQL 16-alpine \(Containerized or Native\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 634.0 Tm (Container Runtime | Docker Engine 24+ or Podman 4+ | Docker Engine 27+ with Docker Compose v2) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 622.5 Tm (& Buildx) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 611.0 Tm (Web Browser | Chrome/Edge/Firefox/Safari \(ES2020\) | Chromium/Chrome 120+ \(for Web Speech API) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 599.5 Tm (voice recognition\)) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 582.0 Tm (10. HARDWARE REQUIREMENTS) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 564.0 Tm (Resource | Minimum Development Spec | Recommended Production Spec) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 551.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 540.0 Tm (CPU Architecture | Dual-Core x86_64 or ARM64 \(2.0 GHz\) | Quad-Core+ x86_64 \(with Intel/AMD) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 528.5 Tm (SHA-NI, SSSE3, SSE4.2\) or Apple M-Series) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 517.0 Tm (Memory \(RAM\) | 4 GB RAM | 8 GB+ RAM \(16 GB if running local Ollama 3B LLM\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 505.5 Tm (Storage | 2 GB free disk space \(SSD\) | 20 GB+ NVMe SSD for PostgreSQL volumes & blockchain) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 494.0 Tm (ledger) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 482.5 Tm (Network | Localhost loopback \(offline capable\) | 100 Mbps+ HTTPS connectivity for official) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 471.0 Tm (.gov.in portal reachability checks) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 453.5 Tm (11. DSA IMPLEMENTATION AND COMPLEXITY ANALYSIS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 435.5 Tm (Every performance-critical operation in Organic Trace was analyzed for time and space) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 422.5 Tm (complexity and upgraded with optimal Data Structures and Algorithms in) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 409.5 Tm (backend/src/utils/dsaEngine.js and backend/src/native/: ) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 391.5 Tm (Operation / Module | Data Structure / Algorithm | Previous Complexity | Optimized Complexity | Space C) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 378.5 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 367.5 Tm (Top-K Scheme & RAG Ranking | Binary Min-Heap Priority Queue \(MinHeap.selectTopK\) | O\(N log N\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 356.0 Tm (full array sort | O\(N log K\) heap selection | O\(K\) auxiliary) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 344.5 Tm (Keyword & Multilingual Search | Inverted Index + Prefix Trie \(InvertedIndex, PrefixTrie\) | O\(N) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 333.0 Tm (* F * L\) linear substring scan | O\(Q * P + L\) token/prefix lookup | O\(V + D\) index) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 321.5 Tm (Batch & Event Tamper Proof | Binary SHA-256 Merkle Tree + Proof \(MerkleTree\) | O\(N\) root only) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 310.0 Tm (\(capped at 128\) | O\(N\) build, O\(log2 N\) proof verify | O\(log2 N\) proof) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 298.5 Tm (Custody Progression Validation | Directed Acyclic Graph + Kahn's Topological Sort | None) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 287.0 Tm (\(unvalidated event order\) | O\(V + E\) topo sort, O\(E\) check | O\(V + E\) graph) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 275.5 Tm (Trace & Scheme API Caching | C++20 Shared-Mutex Hash Map + Doubly-Linked LRU | O\(N\) DB/RPC) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 264.0 Tm (query per request | O\(1\) average get / set / evict | O\(C\) bounded \(4096\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 252.5 Tm (Eligibility & Integrity Scoring | x86_64 SIMD pmaddwd 16-bit Vector Dot Product | O\(D\) scalar) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 241.0 Tm (JS loop | O\(D / 8\) SIMD vector instructions | O\(1\) XMM registers) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 229.5 Tm (Certificate Base64 Hashing | C11 256-Byte Lookup Table + 4KB Stack Streamer | O\(B\) heap Buffer) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 218.0 Tm (allocation | O\(B\) streaming + hardware SHA-NI | O\(1\) stack \(4 KB\)) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 200.5 Tm (12. PERFORMANCE OPTIMIZATION TECHNIQUES) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 182.5 Tm (* CPU & Native SIMD Optimization: Implemented SHA-256 block transformation using) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 169.5 Tm (Intel/AMD SHA-NI intrinsics \(_mm_sha256rnds2_epu32, _mm_sha256msg1_epu32,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 156.5 Tm (_mm_sha256msg2_epu32\), vectorized SSSE3 nibble-to-hex conversion \(pshufb\), hardware) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 143.5 Tm (SSE4.2 CRC32C \(crc32q\), and 8-wide 16-bit multiply-accumulate \(pmaddwd\).) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 130.5 Tm (* Memory Optimization \(Zero-Heap Streaming\): Certificate uploads up to 5 MB are decoded) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 117.5 Tm (from Base64 in C11 using a 256-byte lookup table directly into a 4,096-byte stack) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 104.5 Tm (buffer, avoiding multi-megabyte V8 heap allocations and garbage collection pressure.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 91.5 Tm (* Database Optimization: Added 8 PostgreSQL B-Tree indexes across Batch \(farmerId,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 78.5 Tm (chainStatus, createdAt\), SupplyChainEvent \(batchId+createdAt, participantId,) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 5 of 10) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 17 0 R >>
+endobj
+17 0 obj
+<< /Length 8013 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 745.0 Tm (chainStatus\), GovernmentScheme \(governmentLevel+state+applicationStatus, lastVerifiedAt,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 732.0 Tm (supportsOrganic\), and SchemeSyncLog \(syncedAt\), plus memoized ensureSchemesSeeded\(\) in) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 719.0 Tm (memory.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 706.0 Tm (* Blockchain & I/O Optimization: Added mtime-checked in-memory caching for) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 693.0 Tm (localChainLedger.json and replaced sequential EVM contract.getEvent\(\) loops with) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 680.0 Tm (parallel Promise.all\(\) RPC batches.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 667.0 Tm (* Frontend Bundle Optimization: Applied React.lazy\(\) and Suspense to 10 route views and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 654.0 Tm (configured Rollup manualChunks \(vendor-react, vendor-utils\), reducing the main entry) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 641.0 Tm (bundle from 577.36 kB to 226.24 kB \(-60.8%\).) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 628.0 Tm (13. SECURITY IMPLEMENTATION) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 610.0 Tm (Security Control | Implementation Mechanism | Verified Protection) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 597.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 586.0 Tm (JWT Signature Enforcement | jwt.verify\(token, secret\) in backend/src/middleware/auth.js |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 574.5 Tm (Blocks forged tokens, unsigned jwt.decode payloads, and X-User-Email header spoofing \(401\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 563.0 Tm (Object-Level Auth \(BOLA/IDOR\) | Ownership check \(batch.farmerId === req.user.id\) on) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 551.5 Tm (certificate upload & scheme linking | Prevents Farmer B from modifying Farmer A's batch) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 540.0 Tm (certificates or scheme links \(403\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 528.5 Tm (Role-Based Access \(RBAC\) | requireRole\('FARMER', 'ADMIN'\) / requireRole\('PARTNER', 'FARMER',) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 517.0 Tm ('ADMIN'\) | Restricts batch creation to Farmers/Admins and custody logging to authorized roles) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 505.5 Tm (Sensitive Data Redaction | SAFE_USER_SELECT prisma projection on Batch and SupplyChainEvent) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 494.0 Tm (queries | Guarantees bcrypt passwordHash is never serialized in API responses) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 482.5 Tm (Input Validation & Encoding | Strict Zod schemas on all POST/PUT routes + ISO date refinement) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 471.0 Tm (+ voice sanitizer | Rejects malformed JSON \(400\), invalid dates \(400\), negative quantities,) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 459.5 Tm (and XSS/SQLi) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 448.0 Tm (SSRF & Domain Whitelisting | isSafeOfficialUrl\(\) enforces https: protocol and .gov.in /) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 436.5 Tm (.nic.in domains | Blocks http:, javascript:, and untrusted third-party URLs during portal sync) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 425.0 Tm (Timing-Attack Prevention | Branchless x86_64 assembly asm_const_time_eq &) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 413.5 Tm (crypto.timingSafeEqual | Prevents side-channel timing attacks during certificate & metadata) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 402.0 Tm (hash comparison) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 390.5 Tm (Container Hardening | Multi-stage Dockerfile running as non-root USER node + Helmet HTTP) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 379.0 Tm (headers | Enforces least privilege and secure HTTP response headers) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 361.5 Tm (14. DATABASE ARCHITECTURE) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 343.5 Tm (The PostgreSQL 16 database schema \(backend/prisma/schema.prisma\) consists of 7 normalized) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 330.5 Tm (relational models with foreign-key referential integrity and B-Tree indexing:) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 312.5 Tm (+-------------------+       1:N       +-----------------------+       1:N       +-----------------------) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 302.0 Tm (|       User        |---------------->|         Batch         |---------------->|   SupplyChainEvent    ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 291.5 Tm (+-------------------+                 +-----------------------+                 +-----------------------) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 281.0 Tm (| PK id \(UUID\)      |                 | PK id \(UUID\)          |                 | PK id \(UUID\)          ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 270.5 Tm (| UQ email          |                 | UQ batchId \(String\)   |                 | FK batchId            ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 260.0 Tm (|    name           |                 | FK farmerId           |                 | FK participantId      ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 249.5 Tm (|    passwordHash   |                 |    productName        |                 |    eventType          ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 239.0 Tm (|    role \(Enum\)    |                 |    cropType, quantity |                 |    location, notes    ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 228.5 Tm (+---------+---------+                 |    certificateHash    |                 |    chainTxHash        ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 218.0 Tm (          |                           |    chainTxHash        |                 +-----------------------) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 207.5 Tm (          | 1:1                       +-----------+-----------+) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 197.0 Tm (          v                                       | 1:N) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 186.5 Tm (+-------------------+                             v) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 176.0 Tm (|  UserPreference   |                 +-----------------------+       N:1       +-----------------------) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 165.5 Tm (+-------------------+                 |    BatchSchemeLink    |<----------------|   GovernmentScheme    ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 155.0 Tm (| PK id \(UUID\)      |                 +-----------------------+                 +-----------------------) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 144.5 Tm (| UQ userId \(FK\)    |                 | PK id \(UUID\)          |                 | PK id \(UUID\)          ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 134.0 Tm (|    preferredLang  |                 | UQ \(batchId,schemeId\) |                 | UQ schemeCode         ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 123.5 Tm (|    voiceLanguage  |                 | FK linkedByUserId     |                 |    governmentLevel    ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 113.0 Tm (|    state, district|                 +-----------------------+                 |    state, categories  ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 102.5 Tm (+-------------------+                                                           |    officialPortalUrl  ) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 92.0 Tm (                                                                                +-----------------------) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 76.5 Tm (15. API DOCUMENTATION) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 6 of 10) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 19 0 R >>
+endobj
+19 0 obj
+<< /Length 6785 >>
+stream
+BT
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 745.0 Tm (Method & Endpoint | Auth / Role | Description | Response Status) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 732.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 721.0 Tm (GET /api/health | Public | System health, blockchain status & C11/C++20/ASM telemetry | 200 OK) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 709.5 Tm (GET /api/health/benchmark | Public | Executes live SHA-NI, SIMD pmaddwd & Merkle) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 698.0 Tm (micro-benchmark | 200 OK) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 686.5 Tm (POST /api/auth/register | Public | Registers a new FARMER, PARTNER, or ADMIN user | 201 / 400) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 675.0 Tm (/ 409) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 663.5 Tm (POST /api/auth/login | Public | Authenticates user credentials and returns signed JWT | 200 /) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 652.0 Tm (400 / 401) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 640.5 Tm (POST /api/auth/refresh | Signed JWT | Refreshes session for a cryptographically signed JWT |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 629.0 Tm (200 / 401 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 617.5 Tm (GET /api/auth/me | Bearer JWT | Returns current authenticated user profile | 200 / 401) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 606.0 Tm (POST /api/batches | FARMER, ADMIN | Creates organic batch in DB and anchors SHA-256 hash) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 594.5 Tm (on-chain | 201 / 400 / 409) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 583.0 Tm (GET /api/batches | Bearer JWT | Lists batches \(farmer's own first\) with pagination metadata |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 571.5 Tm (200 / 401) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 560.0 Tm (GET /api/batches/:batchId | Bearer JWT | Returns batch details, events, and on-chain) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 548.5 Tm (verification | 200 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 537.0 Tm (POST /api/batches/:batchId/certificate | FARMER \(Owner\), ADMIN | Streams Base64 certificate) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 525.5 Tm (into C11 SHA-NI & anchors on-chain | 200 / 403 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 514.0 Tm (POST /api/batches/:batchId/certificate/verify | Public | Constant-time assembly verification) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 502.5 Tm (of a certificate file | 200 / 400 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 491.0 Tm (POST /api/batches/:batchId/events | PARTNER, FARMER, ADMIN | Appends custody event in) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 479.5 Tm (PostgreSQL and SupplyChain.sol | 201 / 400 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 468.0 Tm (GET /api/trace/:batchId | Public | Consumer QR trace with Merkle proof & DAG custody analysis) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 456.5 Tm (| 200 / 404) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 445.0 Tm (GET /api/schemes | Public | Search, filter, sort & paginate 17+ verified government schemes |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 433.5 Tm (200 OK) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 422.0 Tm (POST /api/schemes/recommend | Public | SIMD-accelerated personalized scheme eligibility) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 410.5 Tm (matcher | 200 / 400) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 399.0 Tm (POST /api/assistant/ask | Public \(Rate-Limited\) | Hybrid RAG + LLM question answering in) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 387.5 Tm (English & Hindi | 200 / 400) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 370.0 Tm (16. TESTING METHODOLOGY) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 352.0 Tm (A comprehensive multi-tier automated testing framework was implemented using) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 339.0 Tm (Hardhat/Mocha/Chai for Solidity smart contracts and Node.js's built-in test runner) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 326.0 Tm (\(node:test + node:assert/strict + experimental-test-coverage\) for backend and frontend) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 313.0 Tm (verification:) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 295.0 Tm (1. Smart Contract Unit Tests \(contracts/test/SupplyChain.test.js\): Verifies product) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 282.0 Tm (creation, duplicate batch rejection, event logging, non-existent batch event reverts,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 269.0 Tm (certificate hash anchoring, full event history retrieval, and SHA-256 metadata hash) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 256.0 Tm (anchoring on the local Hardhat EVM.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 238.0 Tm (2. DSA & Native Accelerator Unit Tests \(backend/test/schemesAndTrace.test.js\): Tests MinHeap) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 225.0 Tm (Top-K selection, PrefixTrie autocomplete, InvertedIndex ranking, MerkleTree O\(log N\) proof) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 212.0 Tm (generation and tamper rejection, SupplyChainStageDAG topological sorting and regression) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 199.0 Tm (anomaly detection, LruTtlCache eviction, and C11/C++20/x86_64 Assembly functions \(including) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 186.0 Tm (>128-leaf Merkle trees\).) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 168.0 Tm (3. Security & Negative Input Tests: Exercises unauthenticated access rejection \(401\),) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 155.0 Tm (garbage token rejection \(401\), forged JWT signature rejection \(401\), X-User-Email header) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 142.0 Tm (spoofing rejection \(401\), RBAC enforcement \(403\), cross-farmer BOLA certificate upload) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 129.0 Tm (prevention \(403\), passwordHash redaction verification, malformed JSON handling \(400\),) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 116.0 Tm (invalid ISO dates \(400\), negative quantities \(400\), and SQLi/XSS/shell injection payloads.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 98.0 Tm (4. Integration, End-to-End & Concurrent Load Tests: Executes a complete batch lifecycle) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 85.0 Tm (\(Create -> Certificate Upload -> Certificate Verify Match/Mismatch -> Partner Event ->) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 72.0 Tm (Public QR Trace + Merkle Proof\) and a 40-request parallel load test across /api/trace,) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 7 of 10) Tj
+ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 21 0 R >>
+endobj
+21 0 obj
+<< /Length 6718 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 745.0 Tm (/api/schemes, and /api/health.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 727.0 Tm (17. TEST CASES AND RESULTS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 709.0 Tm (All 27 automated test suites were executed against the live PostgreSQL 16 database, compiled) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 696.0 Tm (C11/C++20/x86_64 Assembly engine, and Hardhat EVM smart contract. Summary: 27 Total Test) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 683.0 Tm (Suites | 27 Passed | 0 Failed | 0 Skipped | Backend Code Coverage: 72.95% Line, 78.82%) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 670.0 Tm (Function \(dsaEngine.js: 93.99% Line\).) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 652.0 Tm (Suite / ID | Test Case Description | Category | Measured Duration | Status) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 639.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 628.0 Tm (SC-01..07 | SupplyChain.sol: batch creation, duplicate guard, events, cert hash & metadataHash) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 616.5 Tm (\(7 tests\) | Smart Contract | 637.0 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 605.0 Tm (BE-01 | URL validator permits only HTTPS official .gov.in/.nic.in domains and blocks unsafe) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 593.5 Tm (URLs | Security / Unit | 1.3 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 582.0 Tm (BE-02 | GET /api/schemes lists verified government schemes with metadata and pagination | API) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 570.5 Tm (/ DB | 96.8 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 559.0 Tm (BE-03 | GET /api/schemes filters by category, state, governmentLevel, and search query | API /) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 547.5 Tm (Integration | 18.2 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 536.0 Tm (BE-04 | GET /api/schemes/:codeOrId returns full scheme details, Hindi translations & safe URL) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 524.5 Tm (| API / i18n | 4.0 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 513.0 Tm (BE-05 | POST /api/schemes/recommend produces SIMD-ranked personalized recommendations | DSA /) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 501.5 Tm (API | 15.6 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 490.0 Tm (BE-06 | POST /api/schemes/sync refreshes dataset and records SchemeSyncLog entry | Integration) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 478.5 Tm (/ DB | 71.6 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 467.0 Tm (BE-07 | Existing traceability & batch workflows + contextual scheme integration | Regression /) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 455.5 Tm (E2E | 230.9 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 444.0 Tm (BE-08 | GET /api/assistant/models lists selectable LLM models and starter categories | API |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 432.5 Tm (15.1 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 421.0 Tm (BE-09 | POST /api/assistant/ask answers Scheme & App queries in English & Hindi with RAG |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 409.5 Tm (Integration / AI | 37.4 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 398.0 Tm (BE-10 | DSA Engine Unit Tests: MinHeap, PrefixTrie, InvertedIndex, MerkleTree, DAG & LRU |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 386.5 Tm (Unit / DSA | 2.3 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 375.0 Tm (BE-11 | Native C11/C++20/x86_64 ASM Unit Tests & 200-Leaf \(>128\) Merkle Tree verification |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 363.5 Tm (Unit / Native | 13.5 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 352.0 Tm (BE-12 | Security Audit: Auth Bypass, Forged JWT, Header Spoofing, RBAC, BOLA & Data Redaction) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 340.5 Tm (| Security | 227.3 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 329.0 Tm (BE-13 | Boundary, Invalid Date, Negative Quantity, Empty, Malformed JSON & SQLi/XSS Tests |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 317.5 Tm (Negative / Boundary | 11.9 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 306.0 Tm (BE-14 | Full E2E Lifecycle: Create -> Cert -> Verify -> Event -> Trace + Merkle Proof + DAG |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 294.5 Tm (End-to-End | 78.4 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 283.0 Tm (BE-15 | Concurrent Load Test: 40 parallel requests across Trace, Schemes & Health Telemetry |) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 271.5 Tm (Performance / Load | 136.8 ms | PASSED) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 260.0 Tm (FE-01..05 | Frontend Voice Command Parser, 27 Indian Languages, Batch Trace & XSS/SQLi) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 248.5 Tm (Rejection \(5 tests\) | Frontend Unit | 102.4 ms | PASSED) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 231.0 Tm (18. PERFORMANCE BENCHMARKING) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 213.0 Tm (All before-and-after performance metrics below were measured directly on the target Linux) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 200.0 Tm (x86_64 workstation \(Node.js v24.20.0, GCC 14.2.0 -O3, PostgreSQL 16\):) Tj
+0.08 0.33 0.18 rg /F2 8.5 Tf 1 0 0 1 52.0 182.0 Tm (Benchmark Metric | Before Optimization | After Optimization | Measured Improvement) Tj
+0.40 0.40 0.40 rg /F3 8.0 Tf 1 0 0 1 52.0 169.0 Tm (------------------------------------------------------------------------------------------------) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 158.0 Tm (POST /api/assistant/ask \(Auto Mode Latency\) | 60,130.75 ms | 37.42 ms | 1,606x faster \(-99.94%) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 146.5 Tm (latency\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 135.0 Tm (Full Backend Test Suite Execution Time | 61,012.81 ms | 1,127.32 ms | 54.1x faster \(with 6x) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 123.5 Tm (more tests\)) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 112.0 Tm (Native C11 SHA-NI + SSSE3 Hex + CRC32C \(100 MB\) | 220.0 MB/s \(JS fallback\) | 1,487.4 MB/s) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 100.5 Tm (\(67.23 ms\) | 6.76x higher throughput) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 89.0 Tm (x86_64 SIMD pmaddwd 16-Bit Dot Product | 450.0 MOps/s \(Scalar JS\) | 10,614.6 MOps/s | 23.58x) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 77.5 Tm (higher throughput) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 8 of 10) Tj
+ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 23 0 R >>
+endobj
+23 0 obj
+<< /Length 6033 >>
+stream
+BT
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 745.0 Tm (Merkle Tree Max Supported Leaf Count \(Native C11\) | Capped at 128 leaves | 65,536 leaves) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 733.5 Tm (\(stack <=128, heap >128\) | 512x capacity increase) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 722.0 Tm (Frontend Main JS Entry Chunk Size \(Vite Build\) | 577.36 kB \(178.82 kB gzip\) | 226.24 kB \(71.16) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 710.5 Tm (kB gzip\) | 60.8% smaller initial bundle) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 52.0 699.0 Tm (40 Concurrent API Requests \(Trace + Schemes + Health\) | Uncached DB/file reads | 102.60 ms) Tj
+0.15 0.15 0.15 rg /F1 8.5 Tf 1 0 0 1 62.0 687.5 Tm (total \(2.56 ms avg/req\) | ~390 req/sec concurrent throughput) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 670.0 Tm (19. DOCKER ARCHITECTURE) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 652.0 Tm (The containerized deployment system uses a multi-stage Dockerfile and a 4-service) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 639.0 Tm (docker-compose.yml orchestration:) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 621.0 Tm (1. Stage 1 \(builder\): Based on node:20-bookworm-slim, installs gcc, g++, make, and python3,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 608.0 Tm (compiles the native C11/C++20/Assembly addon \(organic_native.node\) and fast_launcher binary,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 595.0 Tm (compiles SupplyChain.sol via Hardhat, generates the Prisma client, and builds the code-split) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 582.0 Tm (Vite frontend.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 564.0 Tm (2. Stage 2 \(runtime\): Copies only compiled artifacts into a clean node:20-bookworm-slim) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 551.0 Tm (image, drops root privileges \(USER node\), configures native C++ socket healthchecks) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 538.0 Tm (\(./native/fast_launcher wait-http\), and exposes ports 5000, 5173, and 8545.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 520.0 Tm (3. Docker Compose Services: Orchestrates postgres \(postgres:16-alpine with persistent volume) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 507.0 Tm (organic_trace_data\), hardhat \(local EVM chain\), backend \(auto-migrating and seeding on) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 494.0 Tm (startup with persistent ledger volume organic_trace_ledger\), and frontend over an isolated) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 481.0 Tm (bridge network \(organic_trace_net\).) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 463.0 Tm (20. CROSS-PLATFORM DEPLOYMENT INSTRUCTIONS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 445.0 Tm (* Windows 10 & Windows 11 \(AMD64 / ARM64\): Use PowerShell scripts \(.\\scripts\\build.ps1) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 432.0 Tm (-Docker and .\\scripts\\run.ps1 -Docker\) with Docker Desktop \(WSL 2 backend\), or run) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 419.0 Tm (natively via .\\scripts\\run.ps1 \(invokes run.py\).) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 406.0 Tm (* macOS Intel \(x86_64\) & Apple Silicon \(M1/M2/M3/M4 ARM64\): The Makefile automatically) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 393.0 Tm (detects Darwin \(-undefined dynamic_lookup\) and compiles either x86_64 SIMD assembly or) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 380.0 Tm (the portable C11 ARM64 implementation. Run ./scripts/build.sh && ./scripts/run.sh.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 367.0 Tm (* Debian, Ubuntu, Fedora & Arch Linux: Install gcc, g++, make, nodejs, npm, and docker,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 354.0 Tm (then execute ./scripts/build.sh && ./scripts/run.sh \(or ./scripts/run.sh --docker\).) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 341.0 Tm (* FreeBSD 13.x / 14.x: Because Docker Engine relies on Linux kernel cgroups/namespaces,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 328.0 Tm (FreeBSD users can deploy via \(1\) Native FreeBSD compilation using pkg install node20 gcc) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 315.0 Tm (gmake postgresql16-server, \(2\) Podman OCI containers \(pkg install podman podman-compose) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 302.0 Tm (&& ./scripts/run.sh --docker\), or \(3\) a lightweight Linux VM under bhyve.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 289.0 Tm (21. INSTALLATION GUIDE) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 271.0 Tm (# 1. Clone or extract the repository and configure environment variables) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 260.5 Tm (cp .env.example .env) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 239.5 Tm (# 2. Build all workspaces, native C11/C++20/ASM binaries, smart contracts & frontend) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 229.0 Tm (./scripts/build.sh) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 208.0 Tm (# 3. Start PostgreSQL, Hardhat EVM Node, Backend API \(port 5000\) & Frontend UI \(port 5173\)) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 197.5 Tm (./scripts/run.sh) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 176.5 Tm (# 4. Execute the automated test & benchmark suite) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 166.0 Tm (./scripts/test.sh) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 145.0 Tm (# 5. Stop all services cleanly) Tj
+0.10 0.10 0.25 rg /F3 7.8 Tf 1 0 0 1 54.0 134.5 Tm (./scripts/stop.sh) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 119.0 Tm (22. USER GUIDE) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 101.0 Tm (* Farmer Workflow \(/farmer & /farmer/batches/new\): Log in with farmer@example.com /) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 88.0 Tm (Demo@1234. Click '+ Create Batch' to register a crop batch, upload an organic) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 75.0 Tm (certificate PDF/image \(hashed in C11 SHA-NI and anchored on-chain\), download the) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 9 of 10) Tj
+ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 25 0 R >>
+endobj
+25 0 obj
+<< /Length 6375 >>
+stream
+BT
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 745.0 Tm (printable QR code PNG, and link relevant Government Schemes.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 732.0 Tm (* Supply Chain Partner Workflow \(/partner & /batches/:batchId\): Log in with) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 719.0 Tm (partner@example.com / Demo@1234. Select a batch and record custody transitions) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 706.0 Tm (\(RECEIVED_BY_PROCESSOR, PACKAGED, DISPATCHED, IN_TRANSIT, AVAILABLE_FOR_SALE\).) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 693.0 Tm (* Public Consumer QR Verification \(/trace/ORG-BAS-001\): Scan a batch QR code or visit) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 680.0 Tm (/trace/ORG-BAS-001 without logging in. View the farm-to-fork timeline, verify the) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 667.0 Tm (SHA-256 certificate file, inspect the O\(log N\) Merkle proof & DAG progression, and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 654.0 Tm (confirm zero database tampering.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 641.0 Tm (* Government Schemes & Voice/AI Assistant \(/schemes & /assistant\): Filter 17+ schemes by) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 628.0 Tm (state or category, run the SIMD eligibility matcher, click the microphone button for) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 615.0 Tm (voice navigation in 27 Indian languages, or ask the AI Assistant questions in English or) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 602.0 Tm (Hindi.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 589.0 Tm (23. KNOWN LIMITATIONS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 571.0 Tm (* Local Development EVM Volatility: The built-in Hardhat node runs an in-memory EVM) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 558.0 Tm (chain by default; however, Organic Trace mitigates this via its 3-way auto-healing) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 545.0 Tm (synchronizer and persistent localChainLedger.json.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 532.0 Tm (* Physical-Digital Oracle Boundary: While blockchain hashing guarantees tamper-evidence) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 519.0 Tm (of digital records and certificates after submission, physical crop inspection still) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 506.0 Tm (relies on accredited PGS-India / NPOP certifying agencies.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 493.0 Tm (* Web Speech API Browser Support: Hands-free voice recognition relies on the browser's) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 480.0 Tm (Web Speech API \(best supported in Chromium-based browsers such as Chrome and Edge\).) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 467.0 Tm (24. FUTURE IMPROVEMENTS) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 449.0 Tm (* Layer-2 Public Testnet / Mainnet Anchoring: Support optional anchoring to Polygon POS,) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 436.0 Tm (Arbitrum, or Base alongside the local Hardhat EVM.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 423.0 Tm (* IoT Cold-Chain Telemetry Ingestion: Integrate MQTT temperature and humidity sensors to) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 410.0 Tm (log automated COLD_STORAGE_LOGGED events with hardware signatures.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 397.0 Tm (* ARMv8 Crypto Extension Intrinsics: Extend sha256_engine.c with ARMv8 Cryptography) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 384.0 Tm (Extension intrinsics \(vsha256hq_u32\) to complement the existing x86_64 SHA-NI hardware) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 371.0 Tm (path.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 358.0 Tm (* Zero-Knowledge \(ZK\) Farmer Landholding Proofs: Allow farmers to prove scheme) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 345.0 Tm (eligibility \(e.g., landholding < 2 hectares\) without disclosing exact plot numbers.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 332.0 Tm (25. CONCLUSION) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 314.0 Tm (Organic Trace 2.0 demonstrates how high-assurance blockchain traceability, classical Data) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 301.0 Tm (Structures and Algorithms \(Min-Heaps, Inverted Indexes, Prefix Tries, Merkle Proofs, and) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 288.0 Tm (DAGs\), and low-level C11/C++20/x86_64 SIMD Assembly optimization can be combined with an) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 275.0 Tm (accessible, 27-language farmer support platform. All identified bugs and security) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 262.0 Tm (vulnerabilities have been resolved, performance bottlenecks have been eliminated with up to) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 48.0 249.0 Tm (1,606x measured speedups, and all 27 automated test suites pass with zero regressions.) Tj
+0.08 0.33 0.18 rg /F2 12.0 Tf 1 0 0 1 48.0 231.0 Tm (26. REFERENCES) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 213.0 Tm (* Ministry of Agriculture & Farmers Welfare, Government of India -) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 200.0 Tm (https://agriwelfare.gov.in/) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 187.0 Tm (* Paramparagat Krishi Vikas Yojana \(PKVY\) & PGS-India Organic Portal -) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 174.0 Tm (https://pgsindia-ncof.gov.in/) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 161.0 Tm (* myScheme National Platform for Government Schemes - https://www.myscheme.gov.in/) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 148.0 Tm (* Agriculture Infrastructure Fund \(AIF\) Official Portal - https://agriinfra.dac.gov.in/) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 135.0 Tm (* FIPS PUB 180-4: Secure Hash Standard \(SHS\) & Intel SHA Extensions Programming) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 122.0 Tm (Reference.) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 109.0 Tm (* Ethereum Solidity v0.8.24 & Hardhat Development Environment Documentation -) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 96.0 Tm (https://hardhat.org/) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 58.0 83.0 Tm (* Node.js Node-API \(N-API\) C/C++ Native Addon Specification -) Tj
+0.12 0.15 0.18 rg /F1 9.5 Tf 1 0 0 1 66.0 70.0 Tm (https://nodejs.org/api/n-api.html) Tj
+0.40 0.40 0.40 rg /F1 8.5 Tf 1 0 0 1 330.0 32.0 Tm (Organic Trace Project Documentation \(v2.0.0\)  |  Page 10 of 10) Tj
+ET
+endstream
+endobj
+xref
+0 26
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000184 00000 n 
+0000000254 00000 n 
+0000000329 00000 n 
+0000000397 00000 n 
+0000000543 00000 n 
+0000005712 00000 n 
+0000005858 00000 n 
+0000012576 00000 n 
+0000012724 00000 n 
+0000019688 00000 n 
+0000019836 00000 n 
+0000027943 00000 n 
+0000028091 00000 n 
+0000035135 00000 n 
+0000035283 00000 n 
+0000043349 00000 n 
+0000043497 00000 n 
+0000050335 00000 n 
+0000050483 00000 n 
+0000057254 00000 n 
+0000057402 00000 n 
+0000063488 00000 n 
+0000063636 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R >>
+startxref
+70064
+%%EOF

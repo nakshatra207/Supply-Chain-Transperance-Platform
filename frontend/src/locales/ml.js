@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ഓർഗാനിക് ട്രേസ് (Organic Trace)",
+  "nav.schemes": "സർക്കാർ പദ്ധതികൾ",
+  "nav.assistant": "AI സഹായി",
+  "nav.voice": "ശബ്ദം",
   "nav.login": "ലോഗിൻ",
   "nav.register": "രജിസ്റ്റർ ചെയ്യുക",
   "nav.farmerDashboard": "കർഷക ഡാഷ്‌ബോർഡ്",

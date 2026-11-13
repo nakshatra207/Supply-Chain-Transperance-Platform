@@ -1,5 +1,8 @@
 export default {
   "nav.title": "অর্গানিক ট্রেস (Organic Trace)",
+  "nav.schemes": "সরকারি প্রকল্প",
+  "nav.assistant": "এআই সহায়ক (AI)",
+  "nav.voice": "ভয়েস",
   "nav.login": "লগইন",
   "nav.register": "নিবন্ধন করুন",
   "nav.farmerDashboard": "কৃষক ড্যাশবোর্ড",

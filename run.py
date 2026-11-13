@@ -139,6 +139,7 @@ def get_pids_on_port(port: int) -> list:
                 line = line.strip()
                 if f":{port} " in line and "LISTENING" in line:
                     parts = line.split()
+                    
                     if len(parts) >= 5:
                         try:
                             pid = int(parts[-1])
@@ -185,13 +186,37 @@ def kill_process_tree(pid: int):
         pass
 
 
+def is_docker_pid(pid: int) -> bool:
+    """Check if PID belongs to Docker Desktop / WSL host."""
+    if sys.platform != "win32":
+        return False
+    try:
+        output = subprocess.check_output(f'tasklist /FI "PID eq {pid}" /NH', shell=True, text=True, errors="ignore")
+        name = output.split()[0].lower() if output.strip() else ""
+        for kw in ["docker", "wsl", "vpnkit"]:
+            if kw in name:
+                return True
+    except Exception:
+        pass
+    return False
+
+
 def free_port(port: int, desc: str = ""):
     """Kill any process lingering on the port."""
     pids = get_pids_on_port(port)
     if pids:
         log_warn(f"Port {port} ({desc}) is in use by PID(s): {pids}. Freeing port...")
         for pid in pids:
-            kill_process_tree(pid)
+            if is_docker_pid(pid):
+                log_info(f"PID {pid} on port {port} belongs to Docker/WSL. Stopping conflicting container...")
+                try:
+                    # Stop only non-postgres containers so database stays up
+                    run_command(["docker", "compose", "stop", "hardhat", "backend", "frontend"], cwd=ROOT_DIR, capture=True)
+                except Exception:
+                    pass
+                break
+            else:
+                kill_process_tree(pid)
         time.sleep(1)
 
 
@@ -272,11 +297,49 @@ def start_service(cmd_args: list, cwd: Path, prefix: str, color: str, log_filena
     return proc
 
 
+def get_hardhat_cmd() -> list:
+    """Resolve Hardhat CLI command safely cross-platform."""
+    bootstrap = CONTRACTS_DIR / "node_modules" / "hardhat" / "internal" / "cli" / "bootstrap.js"
+    if bootstrap.exists():
+        return ["node", str(bootstrap)]
+    return ["npx", "hardhat"]
+
+
+def get_prisma_cmd() -> list:
+    """Resolve Prisma CLI command safely cross-platform."""
+    prisma_cli = BACKEND_DIR / "node_modules" / "prisma" / "build" / "index.js"
+    if prisma_cli.exists():
+        return ["node", str(prisma_cli)]
+    return ["npx", "prisma"]
+
+
+def ensure_windows_shims():
+    """Ensure Windows .cmd shims exist in .bin directories when running on Windows."""
+    if sys.platform != "win32":
+        return
+
+    shims = [
+        (CONTRACTS_DIR / "node_modules" / ".bin" / "hardhat.cmd", '@echo off\nnode "%~dp0\\..\\hardhat\\internal\\cli\\bootstrap.js" %*\n'),
+        (BACKEND_DIR / "node_modules" / ".bin" / "nodemon.cmd", '@echo off\nnode "%~dp0\\..\\nodemon\\bin\\nodemon.js" %*\n'),
+        (BACKEND_DIR / "node_modules" / ".bin" / "prisma.cmd", '@echo off\nnode "%~dp0\\..\\prisma\\build\\index.js" %*\n'),
+        (FRONTEND_DIR / "node_modules" / ".bin" / "vite.cmd", '@echo off\nnode "%~dp0\\..\\vite\\bin\\vite.js" %*\n'),
+    ]
+
+    for shim_path, content in shims:
+        try:
+            shim_path.parent.mkdir(parents=True, exist_ok=True)
+            if not shim_path.exists():
+                shim_path.write_text(content, encoding="utf-8")
+        except Exception:
+            pass
+
+
 # --- Step Handlers ---
 
 def check_environment():
     """Verify prerequisites, node, npm, and environment files."""
     log_info("Checking system requirements and configuration files...")
+    ensure_windows_shims()
 
     # Node.js check
     if not check_command_exists("node"):
@@ -327,14 +390,15 @@ def ensure_postgres(skip_docker: bool = False):
     log_info("PostgreSQL is not listening. Attempting to start via Docker Compose...")
 
     def run_compose_up():
+        # Only start postgres service (skip ollama and app containers — those run natively)
         try:
-            res = run_command(["docker", "compose", "up", "-d"], cwd=ROOT_DIR, capture=True)
+            res = run_command(["docker", "compose", "up", "-d", "postgres"], cwd=ROOT_DIR, capture=True)
             if res.returncode == 0:
                 return True
         except Exception:
             pass
         try:
-            res = run_command(["docker-compose", "up", "-d"], cwd=ROOT_DIR, capture=True)
+            res = run_command(["docker-compose", "up", "-d", "postgres"], cwd=ROOT_DIR, capture=True)
             if res.returncode == 0:
                 return True
         except Exception:
@@ -346,19 +410,32 @@ def ensure_postgres(skip_docker: bool = False):
 
     # If failed on Windows, maybe Docker Desktop is not running
     if not started and sys.platform == "win32":
-        docker_desktop_path = Path("C:/Program Files/Docker/Docker/Docker Desktop.exe")
-        if docker_desktop_path.exists():
-            log_warn("Docker daemon is not running. Launching Docker Desktop...")
+        # Search common Docker Desktop installation paths
+        docker_desktop_candidates = [
+            Path("C:/Program Files/Docker/Docker/Docker Desktop.exe"),
+            Path(os.path.expanduser("~/AppData/Local/Programs/DockerDesktop/Docker Desktop.exe")),
+            Path("C:/Program Files (x86)/Docker/Docker/Docker Desktop.exe"),
+        ]
+        docker_desktop_path = None
+        for candidate in docker_desktop_candidates:
+            if candidate.exists():
+                docker_desktop_path = candidate
+                break
+
+        if docker_desktop_path:
+            log_warn(f"Docker daemon is not running. Launching Docker Desktop from {docker_desktop_path}...")
             try:
                 subprocess.Popen([str(docker_desktop_path)])
-                log_info("Waiting up to 35 seconds for Docker Desktop engine to initialize...")
-                for _ in range(35):
+                log_info("Waiting up to 60 seconds for Docker Desktop engine to initialize...")
+                for _ in range(60):
                     time.sleep(1)
                     if run_compose_up():
                         started = True
                         break
             except Exception as e:
                 log_warn(f"Could not automatically launch Docker Desktop: {e}")
+        else:
+            log_warn("Docker Desktop not found. Please install Docker Desktop or start it manually.")
 
     if started:
         log_info("Waiting for PostgreSQL container on port 5432...")
@@ -376,14 +453,15 @@ def ensure_postgres(skip_docker: bool = False):
 def run_database_migrations():
     """Apply Prisma migrations and seed database."""
     log_info("Applying Prisma database migrations...")
+    prisma = get_prisma_cmd()
     try:
         # Run prisma migrate deploy (safe, non-interactive)
-        res = run_command(["npx", "prisma", "migrate", "deploy"], cwd=BACKEND_DIR, capture=True)
+        res = run_command([*prisma, "migrate", "deploy"], cwd=BACKEND_DIR, capture=True)
         if res.returncode == 0:
             log_success("Database schema is up to date.")
         else:
             # Fallback to prisma db push if migrate deploy has drift
-            run_command(["npx", "prisma", "db", "push"], cwd=BACKEND_DIR, capture=True)
+            run_command([*prisma, "db", "push"], cwd=BACKEND_DIR, capture=True)
             log_success("Database schema synced via prisma db push.")
     except Exception as e:
         log_warn(f"Database migration note: {e}")
@@ -421,7 +499,7 @@ def deploy_smart_contract() -> bool:
     log_info("Compiling and deploying SupplyChain smart contract to local node...")
     try:
         proc = run_command(
-            ["npx", "hardhat", "run", "scripts/deploy.js", "--network", "localhost"],
+            [*get_hardhat_cmd(), "run", "scripts/deploy.js", "--network", "localhost"],
             cwd=CONTRACTS_DIR,
             capture=True
         )
@@ -499,10 +577,18 @@ def stop_all_services():
     for port, name in [(8545, "Hardhat Blockchain"), (5000, "Backend API"), (5173, "Frontend UI")]:
         free_port(port, name)
 
-    # Optional docker down
+    # Stop the PostgreSQL Docker container and any other compose services
     try:
-        run_command(["docker", "compose", "down"], cwd=ROOT_DIR, capture=True)
-        log_success("PostgreSQL Docker container stopped.")
+        # Try full compose down first (handles both --docker and native mode)
+        res = run_command(["docker", "compose", "ps", "--quiet"], cwd=ROOT_DIR, capture=True)
+        if res.returncode == 0 and res.stdout.strip():
+            run_command(["docker", "compose", "down"], cwd=ROOT_DIR, capture=True)
+            log_success("Docker Compose containers stopped.")
+        else:
+            # Fallback: just stop postgres if it was the only container
+            run_command(["docker", "compose", "stop", "postgres"], cwd=ROOT_DIR, capture=True)
+            run_command(["docker", "compose", "rm", "-f", "postgres"], cwd=ROOT_DIR, capture=True)
+            log_success("PostgreSQL Docker container stopped.")
     except Exception:
         pass
 
@@ -582,20 +668,20 @@ def run_stack(no_browser: bool = False, no_docker: bool = False):
     # 1. Environment & Subprojects
     check_environment()
 
-    # 2. Database
-    pg_ok = ensure_postgres(skip_docker=no_docker)
-    if pg_ok:
-        run_database_migrations()
-
-    # 3. Clean any orphan processes on project ports
+    # 2. Clean any orphan processes on project ports (before starting database)
     free_port(8545, "Hardhat Blockchain")
     free_port(5000, "Backend API")
     free_port(5173, "Frontend UI")
 
+    # 3. Database
+    pg_ok = ensure_postgres(skip_docker=no_docker)
+    if pg_ok:
+        run_database_migrations()
+
     # 4. Start Hardhat Blockchain Node
     log("HARDHAT", "Starting local Hardhat Ethereum node on port 8545...", YELLOW)
     start_service(
-        ["npx", "hardhat", "node"],
+        [*get_hardhat_cmd(), "node"],
         cwd=CONTRACTS_DIR,
         prefix="HARDHAT",
         color=YELLOW,
@@ -684,6 +770,117 @@ def run_stack(no_browser: bool = False, no_docker: bool = False):
         stop_all_services()
 
 
+def run_docker_stack(no_browser: bool = False):
+    """Run the full stack via Docker Compose (postgres, hardhat, backend, frontend — no Ollama)."""
+    print_banner()
+    signal.signal(signal.SIGINT, handle_signals)
+    signal.signal(signal.SIGTERM, handle_signals)
+
+    log_info("Starting full stack via Docker Compose (skipping Ollama)...")
+
+    # Ensure Docker daemon is running
+    try:
+        res = run_command(["docker", "info"], capture=True)
+        if res.returncode != 0:
+            raise Exception("Docker not responding")
+        log_success("Docker daemon is running.")
+    except Exception:
+        log_warn("Docker daemon is not responding. Attempting to launch Docker Desktop...")
+        docker_desktop_candidates = [
+            Path("C:/Program Files/Docker/Docker/Docker Desktop.exe"),
+            Path(os.path.expanduser("~/AppData/Local/Programs/DockerDesktop/Docker Desktop.exe")),
+            Path("C:/Program Files (x86)/Docker/Docker/Docker Desktop.exe"),
+        ]
+        launched = False
+        for candidate in docker_desktop_candidates:
+            if candidate.exists():
+                subprocess.Popen([str(candidate)])
+                launched = True
+                break
+        if not launched:
+            log_err("Docker Desktop not found! Please install or start Docker Desktop manually.")
+            sys.exit(1)
+
+        log_info("Waiting up to 60 seconds for Docker Desktop...")
+        for i in range(60):
+            time.sleep(1)
+            try:
+                res = run_command(["docker", "info"], capture=True)
+                if res.returncode == 0:
+                    log_success(f"Docker Desktop is ready (took {i+1}s).")
+                    break
+            except Exception:
+                pass
+        else:
+            log_err("Docker Desktop did not start in time. Please start it manually and try again.")
+            sys.exit(1)
+
+    # Build and start services (skip Ollama)
+    log_info("Building and starting containers: postgres, hardhat, backend, frontend...")
+    res = run_command(
+        ["docker", "compose", "up", "-d", "--build", "postgres", "hardhat", "backend", "frontend"],
+        cwd=ROOT_DIR,
+        capture=False
+    )
+    if res.returncode != 0:
+        log_err("Docker Compose failed to start. Check the output above.")
+        sys.exit(1)
+
+    log_success("All Docker containers started!")
+
+    # Wait for services to become healthy
+    log_info("Waiting for services to become healthy...")
+
+    # Wait for backend health
+    if wait_for_backend_health(timeout=90):
+        log_success("Backend API is healthy.")
+    else:
+        log_warn("Backend didn't report healthy within 90s. It may still be starting...")
+
+    # Wait for frontend
+    if wait_for_frontend_ready(timeout=60):
+        log_success("Frontend is ready.")
+    else:
+        log_warn("Frontend didn't respond within 60s. It may still be starting...")
+
+    # Summary
+    print("\n" + "=" * 65)
+    print(f"{GREEN}{BOLD}ORGANIC TRACE IS READY! (Docker Compose){RESET}")
+    print("=" * 65)
+    print(f"  {BOLD}Frontend Web App:{RESET}    {CYAN}http://localhost:5173{RESET}")
+    print(f"  {BOLD}Backend API Health:{RESET}  {CYAN}http://localhost:5000/api/health{RESET}")
+    print(f"  {BOLD}Hardhat RPC Node:{RESET}    {CYAN}http://127.0.0.1:8545{RESET}")
+    print(f"  {BOLD}PostgreSQL:{RESET}          {CYAN}localhost:5432{RESET}")
+    print("-" * 65)
+    print(f"  {BOLD}Demo Login Credentials (Password: Demo@1234):{RESET}")
+    print(f"    - Farmer:   {BLUE}farmer@example.com{RESET}  (Create batches, upload certs)")
+    print(f"    - Partner:  {BLUE}partner@example.com{RESET} (Add supply chain events)")
+    print(f"    - Admin:    {BLUE}admin@example.com{RESET}")
+    print("-" * 65)
+    print(f"  {YELLOW}To stop:  python run.py --stop{RESET}")
+    print(f"  {YELLOW}Or:       docker compose down{RESET}")
+    print("=" * 65 + "\n")
+
+    # Open Browser
+    if not no_browser:
+        try:
+            time.sleep(1.5)
+            webbrowser.open("http://localhost:5173")
+        except Exception:
+            pass
+
+    # Keep alive until Ctrl+C
+    print(f"  {YELLOW}Press Ctrl+C anytime in this window to stop all services cleanly.{RESET}")
+    print("=" * 65 + "\n")
+    try:
+        while True:
+            time.sleep(2)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        stop_all_services()
+
+
 # --- CLI Entry Point ---
 
 def main():
@@ -697,7 +894,9 @@ def main():
     parser.add_argument("--seed", action="store_true", help="Seed the database with sample demo data")
     parser.add_argument("--install", action="store_true", help="Run npm install across all subprojects")
     parser.add_argument("--no-browser", action="store_true", help="Do not open the browser automatically")
-    parser.add_argument("--no-docker", action="store_true", help="Skip Docker compose startup")
+    parser.add_argument("--no-docker", action="store_true", help="Skip Docker compose startup for PostgreSQL in native mode")
+    parser.add_argument("--docker", action="store_true", default=True, help="Run the full stack via Docker Compose (default)")
+    parser.add_argument("--native", action="store_true", help="Run via native host processes instead of Docker Compose")
 
     # Allow subcommands like `python run.py stop` or `python run.py status`
     if len(sys.argv) > 1 and sys.argv[1] in ["stop", "status", "test", "seed", "install"]:
@@ -713,7 +912,7 @@ def main():
     elif args.test:
         print_banner()
         log_info("Running Hardhat smart contract tests...")
-        run_command(["npx", "hardhat", "test"], cwd=CONTRACTS_DIR)
+        run_command([*get_hardhat_cmd(), "test"], cwd=CONTRACTS_DIR)
     elif args.seed:
         print_banner()
         log_info("Seeding database...")
@@ -725,8 +924,11 @@ def main():
             log_info(f"Running npm install in {name}...")
             run_command(["npm", "install"], cwd=folder)
         log_success("All dependencies installed!")
-    else:
+    elif args.native:
         run_stack(no_browser=args.no_browser, no_docker=args.no_docker)
+    else:
+        # Default: Docker Compose stack (Postgres, Hardhat, Backend, Frontend — skips Ollama)
+        run_docker_stack(no_browser=args.no_browser)
 
 
 if __name__ == "__main__":

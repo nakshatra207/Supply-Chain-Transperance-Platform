@@ -8,10 +8,15 @@
     "status": "python run.py --status",
     "blockchain": "cd contracts && npx hardhat node",
     "deploy": "cd contracts && npx hardhat run scripts/deploy.js --network localhost",
+    "test": "npm run test:contracts && npm run test:backend && npm run test:frontend",
     "test:contracts": "cd contracts && npx hardhat test",
+    "test:backend": "cd backend && npm test",
+    "test:frontend": "cd frontend && npm test",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "db:migrate": "cd backend && npx prisma migrate dev --name init",
-    "db:seed": "cd backend && node prisma/seed.js"
+    "db:seed": "cd backend && node prisma/seed.js",
+    "build:native": "make all",
+    "benchmark": "make benchmark"
   }
 }

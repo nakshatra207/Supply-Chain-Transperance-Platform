@@ -79,4 +79,14 @@ describe("SupplyChain", function () {
     const [eventType] = await supplyChain.getFunction("getEvent")("ORG-BAS-001", 0);
     expect(eventType).to.equal("PACKAGED");
   });
+
+  it("anchors and retrieves product SHA-256 metadata hash on-chain", async function () {
+    const metadataHash = ethers.keccak256(ethers.toUtf8Bytes("ORG-BAS-001|Organic Basmati Rice|Basmati Rice|Karnal, Haryana|2026-04-15|500|kg"));
+    await expect(
+      supplyChain.createProductWithMetadata("ORG-BAS-001", farmer.address, metadataHash)
+    ).to.emit(supplyChain, "ProductMetadataAnchored");
+
+    const storedHash = await supplyChain.productMetadataHashes("ORG-BAS-001");
+    expect(storedHash).to.equal(metadataHash);
+  });
 });

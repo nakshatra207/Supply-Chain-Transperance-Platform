@@ -1,5 +1,8 @@
 export default {
   "nav.title": "অৰ্গেনিক ট্ৰেচ (Organic Trace)",
+  "nav.schemes": "চৰকাৰী আঁচনি",
+  "nav.assistant": "AI সহায়ক",
+  "nav.voice": "কণ্ঠ",
   "nav.login": "লগইন",
   "nav.register": "পঞ্জীয়ন কৰক",
   "nav.farmerDashboard": "কৃষক ডেচবৰ্ড",

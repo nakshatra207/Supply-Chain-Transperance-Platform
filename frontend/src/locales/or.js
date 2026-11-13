@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ଅର୍ଗାନିକ୍ ଟ୍ରେସ୍ (Organic Trace)",
+  "nav.schemes": "ସରକାରୀ ଯୋଜନା",
+  "nav.assistant": "AI ସହାୟକ",
+  "nav.voice": "ଭଏସ୍",
   "nav.login": "ଲଗଇନ୍",
   "nav.register": "ପଞ୍ଜୀକରଣ କରନ୍ତୁ",
   "nav.farmerDashboard": "କୃଷକ ଡ୍ୟାସବୋର୍ଡ",

@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ఆర్గానిక్ ట్రేస్ (Organic Trace)",
+  "nav.schemes": "ప్రభుత్వ పథకాలు",
+  "nav.assistant": "AI సహాయకుడు",
+  "nav.voice": "వాయిస్",
   "nav.login": "లాగిన్",
   "nav.register": "రిజిస్టర్ చేసుకోండి",
   "nav.farmerDashboard": "రైతు డ్యాష్‌బోర్డ్",

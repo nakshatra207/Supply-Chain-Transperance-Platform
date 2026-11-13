@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ᱚᱨᱜᱟᱱᱤᱠ ᱴᱨᱮᱥ (Organic Trace)",
+  "nav.schemes": "ᱥᱚᱨᱠᱟᱨᱤ ᱡᱚᱡᱚᱱᱟ",
+  "nav.assistant": "AI ᱜᱚᱲᱚᱭᱤᱡ",
+  "nav.voice": "ᱟᱲᱟᱝ",
   "nav.login": "ᱵᱚᱞᱚᱱ (Login)",
   "nav.register": "ᱧᱩᱛᱩᱢ ᱚᱞ (Register)",
   "nav.farmerDashboard": "ᱪᱟᱹᱥᱤ ᱰᱮᱥᱵᱚᱨᱰ",

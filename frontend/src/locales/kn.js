@@ -1,5 +1,8 @@
 export default {
   "nav.title": "ಆರ್ಗ್ಯಾನಿಕ್ ಟ್ರೇಸ್ (Organic Trace)",
+  "nav.schemes": "ಸರ್ಕಾರಿ ಯೋಜನೆಗಳು",
+  "nav.assistant": "AI ಸಹಾಯಕ",
+  "nav.voice": "ಧ್ವನಿ",
   "nav.login": "ಲಾಗಿನ್",
   "nav.register": "ನೋಂದಣಿ ಮಾಡಿ",
   "nav.farmerDashboard": "ರೈತರ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",

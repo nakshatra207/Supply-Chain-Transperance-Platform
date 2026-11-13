@@ -1,6 +1,9 @@
 export default {
   // Navigation
   "nav.title": "Organic Trace",
+  "nav.schemes": "Government Schemes",
+  "nav.assistant": "AI Assistant",
+  "nav.voice": "Voice",
   "nav.login": "Login",
   "nav.register": "Register",
   "nav.farmerDashboard": "Farmer Dashboard",
@@ -34,15 +37,6 @@ export default {
   "landing.importantTitle": "Important:",
   "landing.importantDesc":
     "Blockchain provides a tamper-evident and auditable record of submitted and verified supply-chain information. Physical product authenticity still depends on trusted participants, certification authorities, and inspections.",
-  "landing.schemesBadge": "Government Agricultural Initiatives",
-  "landing.schemesTitle": "Active Indian Government Schemes",
-  "landing.schemesDesc": "Explore national programs powering organic certification, direct income, precision irrigation, and agricultural value chains across India.",
-  "landing.schemesAutoScroll": "Auto-scrolling horizontally · Hover or drag to inspect",
-  "landing.schemesPausedNotice": "Scrolling paused · Use arrows or drag to explore",
-  "landing.schemesPause": "Pause",
-  "landing.schemesPlay": "Auto-scroll",
-  "landing.schemesLearnMore": "Official Portal",
-  "landing.schemesKeyBenefit": "Key Benefit",
 
   // Login & Register
   "auth.loginTitle": "Log in",

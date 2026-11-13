@@ -19,6 +19,18 @@ enum EventStatus {
   FAILED
 }
 
+enum GovernmentLevel {
+  CENTRAL
+  STATE
+}
+
+enum SchemeApplicationStatus {
+  OPEN
+  UPCOMING
+  CLOSED
+  STATUS_UNVERIFIED
+}
+
 model User {
   id           String   @id @default(uuid())
   name         String
@@ -27,8 +39,11 @@ model User {
   role         Role
   createdAt    DateTime @default(now())
 
-  batches Batch[]            @relation("FarmerBatches")
-  events  SupplyChainEvent[] @relation("EventParticipant")
+  batches          Batch[]            @relation("FarmerBatches")
+  events           SupplyChainEvent[] @relation("EventParticipant")
+  savedSchemes     SavedScheme[]
+  batchSchemeLinks BatchSchemeLink[]
+  preference       UserPreference?
 }
 
 model Batch {
@@ -53,7 +68,12 @@ model Batch {
 
   createdAt DateTime @default(now())
 
-  events SupplyChainEvent[]
+  events      SupplyChainEvent[]
+  schemeLinks BatchSchemeLink[]
+
+  @@index([farmerId])
+  @@index([chainStatus])
+  @@index([createdAt])
 }
 
 model SupplyChainEvent {
@@ -70,4 +90,113 @@ model SupplyChainEvent {
   chainStatus EventStatus @default(PENDING)
 
   createdAt DateTime @default(now())
+
+  @@index([batchId, createdAt])
+  @@index([participantId])
+  @@index([chainStatus])
+}
+
+model GovernmentScheme {
+  id                    String                  @id @default(uuid())
+  schemeCode            String                  @unique
+  name                  String
+  nameHi                String?
+  shortName             String?
+  description           String
+  descriptionHi         String?
+  ministry              String
+  department            String?
+  governmentLevel       GovernmentLevel         @default(CENTRAL)
+  state                 String                  @default("ALL") // "ALL" for Central or state name e.g. "Haryana"
+  categories            String[]
+  beneficiaryTypes      String[]
+  eligibilityCriteria   String[]
+  eligibilityCriteriaHi String[]
+  fundingType           String // SUBSIDY, GRANT, DIRECT_BENEFIT, CREDIT_SUBVENTION, INSURANCE, MARKET_PLATFORM
+  benefitSummary        String
+  benefitSummaryHi      String?
+  maxSubsidyPercent     Float?
+  maxBenefitAmount      String?
+  applicationStatus     SchemeApplicationStatus @default(OPEN)
+  applicationStartDate  DateTime?
+  applicationEndDate    DateTime?
+  isRollingApplication  Boolean                 @default(true)
+  requiredDocuments     String[]
+  requiredDocumentsHi   String[]
+  applicationSteps      String[]
+  applicationStepsHi    String[]
+  officialPortalUrl     String
+  guidelinesUrl         String?
+  sourceUrl             String
+  verificationStatus    String                  @default("OFFICIAL_VERIFIED") // OFFICIAL_VERIFIED, CURATED_VERIFIED, CACHED, UNVERIFIED
+  launchYear            Int?
+  supportsOrganic       Boolean                 @default(false)
+  landholdingRequirement String?
+  tags                  String[]
+  lastUpdatedDate       DateTime                @default(now())
+  lastVerifiedAt        DateTime                @default(now())
+  lastSyncedAt          DateTime                @default(now())
+  createdAt             DateTime                @default(now())
+
+  savedByUsers SavedScheme[]
+  batchLinks   BatchSchemeLink[]
+
+  @@index([governmentLevel, state, applicationStatus])
+  @@index([lastVerifiedAt])
+  @@index([supportsOrganic])
+}
+
+model SavedScheme {
+  id        String           @id @default(uuid())
+  user      User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  scheme    GovernmentScheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+  schemeId  String
+  notes     String?
+  createdAt DateTime         @default(now())
+
+  @@unique([userId, schemeId])
+}
+
+model BatchSchemeLink {
+  id              String           @id @default(uuid())
+  batch           Batch            @relation(fields: [batchId], references: [batchId], onDelete: Cascade)
+  batchId         String
+  scheme          GovernmentScheme @relation(fields: [schemeId], references: [id], onDelete: Cascade)
+  schemeId        String
+  linkedBy        User             @relation(fields: [linkedByUserId], references: [id], onDelete: Cascade)
+  linkedByUserId  String
+  utilizationNote String?
+  createdAt       DateTime         @default(now())
+
+  @@unique([batchId, schemeId])
+}
+
+model UserPreference {
+  id                  String   @id @default(uuid())
+  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId              String   @unique
+  preferredLanguage   String   @default("en")
+  voiceLanguage       String   @default("en-IN")
+  ttsEnabled          Boolean  @default(true)
+  state               String?
+  district            String?
+  farmerCategory      String?
+  landholdingCategory String?
+  organicCertStatus   String?
+  isFpoMember         Boolean  @default(false)
+  farmingInterests    String[]
+  updatedAt           DateTime @updatedAt
+}
+
+model SchemeSyncLog {
+  id             String   @id @default(uuid())
+  sourceName     String
+  status         String   // SUCCESS, PARTIAL, FAILED
+  schemesChecked Int      @default(0)
+  schemesUpdated Int      @default(0)
+  errorMessage   String?
+  syncedAt       DateTime @default(now())
+
+  @@index([syncedAt])
 }

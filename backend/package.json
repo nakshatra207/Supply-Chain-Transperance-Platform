@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon src/index.js",
     "start": "node src/index.js",
-    "seed": "node prisma/seed.js"
+    "seed": "node prisma/seed.js",
+    "test": "node --test test/schemesAndTrace.test.js"
   },
   "dependencies": {
     "@prisma/client": "^5.19.0",

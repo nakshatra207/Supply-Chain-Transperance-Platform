@@ -2,16 +2,89 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-stone-50 text-stone-800;
+@layer base {
+  body {
+    @apply bg-stone-50 text-stone-800 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-200 antialiased;
+    overflow-x: hidden;
+  }
+
+  button,
+  [role="button"],
+  a,
+  select,
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+
+  /* Focus ring for keyboard navigation & accessibility */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-leaf-500 ring-offset-1 dark:ring-offset-stone-900;
+  }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
+/* Global Dark Mode surface overrides for existing utility cards & inputs */
+html.dark .bg-white {
+  background-color: #1c1917 !important; /* stone-900 */
 }
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+html.dark .bg-stone-50 {
+  background-color: #0c0a09 !important; /* stone-950 */
+}
+
+html.dark .bg-stone-100 {
+  background-color: #292524 !important; /* stone-800 */
+}
+
+html.dark .border-stone-200,
+html.dark .border-stone-100 {
+  border-color: #292524 !important; /* stone-800 */
+}
+
+html.dark .border-stone-300 {
+  border-color: #44403c !important; /* stone-700 */
+}
+
+html.dark .text-stone-900,
+html.dark .text-stone-800 {
+  color: #f5f5f4 !important; /* stone-100 */
+}
+
+html.dark .text-stone-700,
+html.dark .text-stone-600 {
+  color: #d6d3d1 !important; /* stone-300 */
+}
+
+html.dark .text-stone-500 {
+  color: #a8a29e !important; /* stone-400 */
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1c1917;
+  color: #f5f5f4;
+  border-color: #44403c;
+}
+
+@keyframes fadeInSlide {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInSlide 0.22s ease-out;
 }

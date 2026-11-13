@@ -3,6 +3,12 @@ const { z } = require("zod");
 const prisma = require("../prismaClient");
 const { requireAuth, requireRole } = require("../middleware/auth");
 const { recordEventOnChain, getSignerAddress } = require("../blockchain");
+const {
+  computeEventDataHash,
+  cacheGetJson,
+  cacheSetJson,
+  cacheInvalidateBatch,
+} = require("../hash");
 
 const router = express.Router({ mergeParams: true });
 
@@ -45,11 +51,24 @@ router.post("/:batchId/events", requireAuth, requireRole("PARTNER", "FARMER", "A
     },
   });
 
-  const chainResult = await recordEventOnChain({
+  const signerAddr = getSignerAddress();
+  const dataHash = computeEventDataHash({
     batchId: batch.batchId,
     eventType: event.eventType,
-    participant: getSignerAddress(),
+    participant: signerAddr || req.user.id,
+    location: event.location || "",
+    notes: event.notes || "",
+  });
+
+  const chainResult = await recordEventOnChain({
+    eventId: event.id,
+    batchId: batch.batchId,
+    eventType: event.eventType,
+    participant: signerAddr,
+    dataHash,
     location: event.location,
+    notes: event.notes,
+    batch,
   });
 
   const updated = await prisma.supplyChainEvent.update({
@@ -57,16 +76,29 @@ router.post("/:batchId/events", requireAuth, requireRole("PARTNER", "FARMER", "A
     data: { chainTxHash: chainResult.txHash, chainStatus: chainResult.status },
   });
 
+  cacheInvalidateBatch(batch.batchId);
+
   res.status(201).json({ event: updated, blockchain: chainResult });
 });
 
 router.get("/:batchId/events", requireAuth, async (req, res) => {
+  const cacheKey = `events:${req.params.batchId}`;
+  const cached = cacheGetJson(cacheKey);
+  if (cached) {
+    return res.json(cached);
+  }
+
   const events = await prisma.supplyChainEvent.findMany({
     where: { batchId: req.params.batchId },
-    include: { participant: true },
+    include: {
+      participant: { select: { id: true, name: true, email: true, role: true, createdAt: true } },
+    },
     orderBy: { createdAt: "asc" },
   });
-  res.json({ events });
+
+  const payload = { events };
+  cacheSetJson(cacheKey, payload, 15000);
+  res.json(payload);
 });
 
 module.exports = router;

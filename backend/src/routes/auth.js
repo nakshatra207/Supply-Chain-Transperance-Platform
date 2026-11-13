@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const { z } = require("zod");
 const prisma = require("../prismaClient");
-const { requireAuth } = require("../middleware/auth");
+const { requireAuth, getJwtSecret } = require("../middleware/auth");
 
 const router = express.Router();
 
@@ -33,8 +33,8 @@ router.post("/register", async (req, res) => {
 
   const token = jwt.sign(
     { id: user.id, email: user.email, role: user.role, name: user.name },
-    process.env.JWT_SECRET,
-    { expiresIn: "7d" }
+    getJwtSecret(),
+    { expiresIn: "365d" }
   );
 
   res.status(201).json({
@@ -66,14 +66,53 @@ router.post("/login", async (req, res) => {
 
   const token = jwt.sign(
     { id: user.id, email: user.email, role: user.role, name: user.name },
-    process.env.JWT_SECRET,
-    { expiresIn: "7d" }
+    getJwtSecret(),
+    { expiresIn: "365d" }
   );
 
   res.json({
     token,
     user: { id: user.id, name: user.name, email: user.email, role: user.role },
   });
+});
+
+// POST /api/auth/refresh — Refresh session token for a user with a valid/expired signed JWT
+router.post("/refresh", async (req, res) => {
+  try {
+    const secret = getJwtSecret();
+    const header = req.headers.authorization;
+    const rawToken =
+      (header && header.startsWith("Bearer ") ? header.slice(7).trim() : null) ||
+      (req.body && typeof req.body.token === "string" ? req.body.token.trim() : null);
+
+    if (!rawToken) {
+      return res.status(401).json({ error: "Signed token required to refresh session" });
+    }
+
+    let verified;
+    try {
+      verified = jwt.verify(rawToken, secret, { ignoreExpiration: true });
+    } catch {
+      return res.status(401).json({ error: "Invalid token signature" });
+    }
+
+    let user = null;
+    if (verified.id) {
+      user = await prisma.user.findUnique({ where: { id: String(verified.id) } });
+    }
+    if (!user && verified.email) {
+      user = await prisma.user.findUnique({ where: { email: String(verified.email) } });
+    }
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    const userData = { id: user.id, name: user.name, email: user.email, role: user.role };
+    const token = jwt.sign(userData, secret, { expiresIn: "365d" });
+    res.json({ token, user: userData });
+  } catch (err) {
+    res.status(500).json({ error: "Could not refresh session" });
+  }
 });
 
 router.get("/me", requireAuth, async (req, res) => {

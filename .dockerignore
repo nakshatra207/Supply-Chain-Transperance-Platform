@@ -1,0 +1,30 @@
+# Dependencies & build artifacts
+node_modules
+*/node_modules
+frontend/dist
+contracts/cache
+contracts/artifacts
+backend/src/native/*.o
+backend/src/native/*.node
+native/fast_launcher
+
+# Local state & logs
+.run
+.ollama
+.git
+.github
+*.log
+npm-debug.log*
+
+# Environment files with local secrets
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Documentation & IDE files
+.vscode
+.idea
+*.docx
+*.pdf
